@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://deo.or.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://deo.or.id/" rel="alternate" type="text/html" /><updated>2022-02-14T12:16:07+08:00</updated><id>https://deo.or.id/feed.xml</id><title type="html">Deo Valiandro. M</title><subtitle>Hamba yang tidak berguna di tangan Allah yang penuh hikmat.</subtitle><entry><title type="html">Aritmatika Polinom di dalam Medan Galois $GF(2^n)$</title><link href="https://deo.or.id/2022/02/12/aritmatika-polinom-medan-galois.html" rel="alternate" type="text/html" title="Aritmatika Polinom di dalam Medan Galois $GF(2^n)$" /><published>2022-02-12T00:00:00+08:00</published><updated>2022-02-12T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/12/aritmatika-polinom-medan-galois</id><content type="html" xml:base="https://deo.or.id/2022/02/12/aritmatika-polinom-medan-galois.html"><![CDATA[<div class="paragraph">
+<p>Galois Field (GF) yang banyak digunakan dalam kriptografi adalah $GF(2^n)$
+karena setiap baris text direpresentasikan sebagai barisan bit 0 dan 1 sepanjang
+$n$ bit.</p>
+</div>
+<div class="paragraph">
+<p>Semua elemen dalam $GF(2^n)$ dinyatakan dalam bentuk polinom.</p>
+</div>
+<div class="paragraph">
+<p>Bentuk umum polinom berderajat n adalah:</p>
+</div>
+<div class="paragraph">
+<p>$$f(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{2}x^{2} + a_{1}x + a_{0}$</p>
+</div>
+<div class="paragraph">
+<p>$a_{n}, a_{n-1}, a_{0}$ adalah koefisien-koefisien polinom, $n$ adalah derajat
+polinom.</p>
+</div>
+<div class="paragraph">
+<p>$GF(2^{n})$ memiliki $2^n$ elemen, setiap elemen direpresentasikan sebagai
+polinom berderajat $n-1$ atau kurang, dengan koefisien-koefisiennya adalah
+elemen $\{0, 1\}$:</p>
+</div>
+<div class="paragraph">
+<p>$$GF(p^{n}) = \{a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \cdots + a_{1}x + a_{0} |
+a_{i} \in \{0, 1\}\}$</p>
+</div>
+<div class="paragraph">
+<p>Contohnya:
+$GF(2^{3}) = \{a_{2}x^{2} + a_{1}x^{1} + a_{0} | a_{i} \in \{0, 1\}\}$, memiliki
+derajat polinom $\geq 2$.</p>
+</div>
+<div class="paragraph">
+<p>Di dalam $GF(2^3)$, terdapat $2^{3} = 8$ polinom, yaitu:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>$0 \to 000$</p>
+</li>
+<li>
+<p>$1 \to 001$</p>
+</li>
+<li>
+<p>$x \to 010$</p>
+</li>
+<li>
+<p>$x+1 \to 011$</p>
+</li>
+<li>
+<p>$x^{2} \to 100$</p>
+</li>
+<li>
+<p>$x^{2}+1 \to 101$</p>
+</li>
+<li>
+<p>$x^{2}+x \to 110$</p>
+</li>
+<li>
+<p>$x^{2}+x+1 \to 111$</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Operasi penjumlahan dan perkalian dilakukan dengan menerapkan penjumlahan
+koefisien-koefisiennya dalam $\bmod \space  2$.</p>
+</div>
+<div class="paragraph">
+<p>Misalnya $a=(a_{n-1} \cdots a_{1}a_{0})$ dan $b=(b_{n-1} \cdots b_{1}b_{0})$,
+$a, b \n GF(2^n)$, maka:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>penjumlahan $a + b = c = (c_{n-1} \cdots c_{1}c_{0}), c_{i} = (a_{i} + b_{i})
+\bmod 2, c \in GF(2^n)$,</p>
+</li>
+<li>
+<p>perkalian $a \times b = c (c_{n-1} \cdots c_{1}c_{0})$ dimana $c$ adalah sisa
+bagi dari polinom $a(x) \cdot b(x)$ dengan <em>irreducible polynomial</em> $f(x)$
+derajat $n$, $c \in GF(2^n)$.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Contoh: $a = x^3 + x^2 + 1$, $b = x^2 + x$, $a, b \in GF(2^4)$,</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+a+b &amp; = x^3 + x^2 + 1 + x^2 + x \bmod 2 \\
+    &amp; = x^3 + 2x^2 + x + 1 \bmod 2 \\
+    &amp; = x^3 + x + 1
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Operasi penjumlahan polinom $GF(p^2) \equiv$ operasi xor $(\oplus)$, misalnya:</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+a \oplus b &amp; = x^3 + x^2 + 1 + x^2 + x \bmod 2 \\
+           &amp; = 1101 \oplus 0110 \\
+           &amp; = 1011 \equiv x^3 + x + 1
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Operasi perkalian sama persis dengan perkalian baisa, kecuali menghasilkan
+polinom dengan derajat $\geq n - 1$,</p>
+</div>
+<div class="paragraph">
+<p>misalnya, $a = x^2 + x, b = x + 1, a, b \in GF(2^4)$,</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+a \cdot b &amp; = (x^2 + x)(x + 1) \bmod 2 \\
+        &amp; = (x^2 \cdot x) + (x^2 \cdot 1) + (x \cdot x) + (x \cdot 1) \bmod 2 \\
+        &amp; = x^3 + x^2 + + x^2 + x \bmod 2 \\
+        &amp; = x^3 + 2(x^2) + x \bmod 2 \\
+        &amp; = x^3 + x
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Jika menghasilkan polinom $\geq n - 1$, maka direduksi dengan membagi secara
+modulo terhadap polinom <em>irreducible polynomial</em> $f(x)$ berderajat $n$.
+<em>Irreducible polynomial</em> adalah polinom yang tidak dihasilkan dari perkalian
+dua buah polinom lain (kecuali $1$ dan dirinya sendiri). Misalnya $x^2 + 1 \in
+GF(2^n)$, contoh lainnya $x^4 + x + 1$, tetapi $x^5 + x^2 + x + 1$ adalah
+polinom tereduksi karena $x^5 + x^2 + x + 1 = (x^5 + x^2 + 1)(x^2 + 1)$.</p>
+</div>
+<div class="paragraph">
+<p>Misalnya $a = 1011, b = 1001, a, b \in GF(2^4)$,</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+a \times b &amp; = (x^3 + x + 1) \times (x^3 + 1) \bmod 2 \\
+           &amp; = x^6 + x^4 + x + 1\\
+           &amp; = x^3 + x^2
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>$x^3 + x^2$ dihasilkan dari membagi $x^6 + x^4 + x + 1$ dengan
+<em>irreducible polynomial</em> $f(x) = x^4 + x + 1$.</p>
+</div>
+<div class="paragraph">
+<p>$f(x)/g(x)$ memberikan hasil $g(x)$ (quotient) dam sisa $r(x)$ (remainder), yang
+memenuhi:</p>
+</div>
+<div class="paragraph">
+<p>$$f(x) = q(x)g(x) + r(x)$</p>
+</div>]]></content><author><name></name></author><category term="Kriptografi" /></entry><entry><title type="html">Semigroup</title><link href="https://deo.or.id/2022/02/07/semigroup.html" rel="alternate" type="text/html" title="Semigroup" /><published>2022-02-07T00:00:00+08:00</published><updated>2022-02-07T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/07/semigroup</id><content type="html" xml:base="https://deo.or.id/2022/02/07/semigroup.html"><![CDATA[<div class="paragraph">
+<p>Sebuah set S yang mempunyai operasi binary $S \times S \to S$, dengan operasi
+$\cdot$ adalah semigroup jika memenuhi:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>$\forall a, b, c \in S, (a \cdot b) \cdot c = a \cdot (b \cdot c)$
+(asosiatif).</p>
+</li>
+</ol>
+</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Monoid</title><link href="https://deo.or.id/2022/02/06/monoid.html" rel="alternate" type="text/html" title="Monoid" /><published>2022-02-06T00:00:00+08:00</published><updated>2022-02-06T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/06/monoid</id><content type="html" xml:base="https://deo.or.id/2022/02/06/monoid.html"><![CDATA[<div class="paragraph">
+<p>Sebuah set S yang mempunyai operasi binary $S \times S \to S$, dengan operasi
+$\cdot$ adalah monoid jika memenuhi:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>$\forall a, b, c \in S, (a \cdot b) \cdot c = a \cdot (b \cdot c)$
+(asosiatif),</p>
+</li>
+<li>
+<p>$\exists e \in S$, sehingga $a \in S$, berlaku $e \cdot a = a$ dan
+$a \cdot e = a$ (element identitas).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Denga artian, monoid adalah semigroup dengan tambahan identitas.</p>
+</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Pemrograman Fungsional</title><link href="https://deo.or.id/2022/02/05/fp.html" rel="alternate" type="text/html" title="Pemrograman Fungsional" /><published>2022-02-05T00:00:00+08:00</published><updated>2022-02-05T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/05/fp</id><content type="html" xml:base="https://deo.or.id/2022/02/05/fp.html"><![CDATA[<div class="paragraph">
+<p>Functional Programming (FP) merupakan konsep yang baru bagi saya. Ketika
+memasuki program studi Ilmu Komputer di Universitas Hasanuddin, saya hanya
+dikenalkan dengan pemrograman imperatif dengan Pascal kemudian melompat ke
+pengantar pemrograman dengan menggunakan Java.</p>
+</div>
+<div class="paragraph">
+<p>Ketika dikenalkan dengan paradigma pemrograman, kami langsung dikenalkan dengan
+pemrograman berorientasi objek atau PBO/OOP (Eng).</p>
+</div>
+<div class="paragraph">
+<p>FP kemudian saya dikenal ketika bergabung dengan komunitas di Telegram, yaitu
+grup Telegram Haskel. Dari grup inilah kemudian dikenalkan dengan berbagai
+konsep fp, namun saya masih kebingungan dengan berbagai jenis konsep fp.</p>
+</div>
+<div class="paragraph">
+<p>Ketika salah satu anggota grup Haskell mengirim channel youtube
+<a href="https://www.youtube.com/c/cvladfp" class="bare">https://www.youtube.com/c/cvladfp</a>, kemudian saya mulai mengenal lebih dalam.</p>
+</div>
+<div class="paragraph">
+<p>Tulisan ini saya tulis untuk mengawali pelajaran tentang fp.</p>
+</div>
+<div class="sect1">
+<h2 id="haskell"><a class="anchor" href="#haskell"></a>Haskell</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Contoh fungsi dasar Haskell,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="haskell"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="n">babyFunction</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="n">babyFucntion</span> <span class="mi">12</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>144
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Contoh mencari data dalam list,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="haskell"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="n">elem'</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Eq</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+<span class="n">elem'</span> <span class="n">a</span> <span class="kt">[]</span> <span class="o">=</span> <span class="kt">False</span>
+<span class="n">elem'</span> <span class="n">a</span> <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span>
+    <span class="o">|</span> <span class="n">a</span> <span class="o">==</span> <span class="n">x</span>    <span class="o">=</span> <span class="kt">True</span>
+    <span class="o">|</span> <span class="n">otherwise</span> <span class="o">=</span> <span class="n">elem'</span> <span class="n">a</span> <span class="n">xs</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is Upper,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="haskell"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="n">isUpper</span> <span class="o">::</span> <span class="kt">Char</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+<span class="n">isUpper</span> <span class="n">x</span> <span class="o">=</span> <span class="n">elem</span> <span class="n">x</span> <span class="p">[</span><span class="sc">'A'</span><span class="o">..</span><span class="sc">'Z'</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+</div>
+</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Selection Sort</title><link href="https://deo.or.id/2022/01/31/selection-sort.html" rel="alternate" type="text/html" title="Selection Sort" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>https://deo.or.id/2022/01/31/selection-sort</id><content type="html" xml:base="https://deo.or.id/2022/01/31/selection-sort.html"><![CDATA[<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="code"><pre><span class="cp">#include "stdio.h"
+</span>
+<span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">selection_sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">min</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">min</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">min</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">min</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">swap</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">min</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+    <span class="n">selection_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>]]></content><author><name></name></author><category term="Algoritma" /></entry><entry><title type="html">Persamaan KaTeX</title><link href="https://deo.or.id/2021/12/18/equation.html" rel="alternate" type="text/html" title="Persamaan KaTeX" /><published>2021-12-18T00:00:00+08:00</published><updated>2021-12-18T00:00:00+08:00</updated><id>https://deo.or.id/2021/12/18/equation</id><content type="html" xml:base="https://deo.or.id/2021/12/18/equation.html"><![CDATA[<div class="paragraph">
+<p>Untuk menggunakan LaTeX align:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="latex"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="p">$$</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}</span><span class="nb">
+a</span><span class="p">_</span><span class="m">1</span><span class="nb"> </span><span class="p">&amp;</span><span class="o">=</span><span class="nb"> </span><span class="nv">\beta</span><span class="p">_</span><span class="m">0</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+    </span><span class="p">&amp;</span><span class="o">=</span><span class="nb"> </span><span class="nv">\beta</span><span class="p">_</span><span class="m">1</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+c</span><span class="p">_</span><span class="m">1</span><span class="nb"> </span><span class="p">&amp;</span><span class="o">=</span><span class="nb"> </span><span class="nv">\beta</span><span class="p">_</span><span class="m">2</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+d</span><span class="p">_</span><span class="m">1</span><span class="nb"> </span><span class="p">&amp;</span><span class="o">=</span><span class="nb"> </span><span class="nv">\beta</span><span class="p">_</span><span class="m">3</span><span class="nb">
+</span><span class="nv">\end</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}</span><span class="nb">$</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Hasilnya sebagai berikut:</p>
+</div>
+<div class="paragraph">
+<p>$$\begin{aligned}
+a_1 &amp;= \beta_0 \\
+    &amp;= \beta_1 \\
+c_1 &amp;= \beta_2 \\
+d_1 &amp;= \beta_3
+\end{aligned}$</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="latex"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="p">$$</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}</span><span class="nb">
+</span><span class="nv">\dot</span><span class="p">{</span><span class="nb">x</span><span class="p">}</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">y</span><span class="o">-</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+</span><span class="nv">\dot</span><span class="p">{</span><span class="nb">y</span><span class="p">}</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\rho</span><span class="nb"> x </span><span class="o">-</span><span class="nb"> y </span><span class="o">-</span><span class="nb"> xz </span><span class="nv">\\</span><span class="nb">
+</span><span class="nv">\dot</span><span class="p">{</span><span class="nb">z</span><span class="p">}</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="o">-</span><span class="nv">\beta</span><span class="nb"> z </span><span class="o">+</span><span class="nb"> xy
+</span><span class="nv">\end</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}</span><span class="nb">$</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>$$\begin{aligned}
+\dot{x} &amp; = \sigma(y-x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy
+\end{aligned}$</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="latex"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="p">$</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}</span><span class="nb">
+a</span><span class="p">_</span><span class="m">2</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="o">(</span><span class="nb">X</span><span class="nv">\'</span><span class="nb">X</span><span class="o">)</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+    </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">=(</span><span class="nb">X</span><span class="nv">\'</span><span class="nb">X</span><span class="o">)</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+    </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">=(</span><span class="nb">X</span><span class="nv">\'</span><span class="nb">X</span><span class="o">)</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+    </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">=(</span><span class="nb">X</span><span class="nv">\'</span><span class="nb">X</span><span class="o">)</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}</span><span class="nb">
+</span><span class="nv">\end</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}$</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+a_2 &amp; = (X'X)^{-1} \\
+    &amp; =(X'X)^{-1} \\
+    &amp; =(X'X)^{-1} \\
+    &amp; =(X'X)^{-1}
+\end{aligned}$</p>
+</div>]]></content><author><name></name></author><category term="Tutorial" /></entry><entry><title type="html">Finite State Machine</title><link href="https://deo.or.id/2021/12/04/fsm.html" rel="alternate" type="text/html" title="Finite State Machine" /><published>2021-12-04T00:00:00+08:00</published><updated>2021-12-04T00:00:00+08:00</updated><id>https://deo.or.id/2021/12/04/fsm</id><content type="html" xml:base="https://deo.or.id/2021/12/04/fsm.html"><![CDATA[<div class="sect1">
+<h2 id="finite-automata"><a class="anchor" href="#finite-automata"></a>Finite Automata</h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>"One way to define a language is to construct an automaton—a kind
+of abstract computer that takes a string as input and produces a
+yes-or-no answer. The language it defines is the set of all strings for
+which it says yes.</p>
+</div>
+<div class="paragraph">
+<p><em>Formal Language - A Practical Introduction by Adam Brooks Webber</em></p>
+</div>
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="a-deterministic-finite-automata-dfa"><a class="anchor" href="#a-deterministic-finite-automata-dfa"></a>a. Deterministic Finite Automata (DFA)</h3>
+<div class="paragraph">
+<p>DFA \$M = (Q, \Sigma, \delta, q_0, F)\$, dimana:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>\$Q\$ adalah set semua state (finite),</p>
+</li>
+<li>
+<p>\$\Sigma\$ adalah alfabet/ input (finite set symbols),</p>
+</li>
+<li>
+<p>\$\delta \in (Q xx \Sigma \to Q)\$ adalah fungsi transisi,</p>
+</li>
+<li>
+<p>\$q_0 \in Q\$ adalah start state,</p>
+</li>
+<li>
+<p>\$F \subseteq Q\$ adalah set state final (<em>accepting state</em>).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Contohnya: \$Q = {A, B}\$, \$\Sigma = {a, b}\$, \$F = {B}\$ dan
+\$\delta\$ =<br>
+\$\delta(A, a) = B\$<br>
+\$\delta(A, b) = A\$<br>
+\$\delta(B, a) = B\$<br>
+\$\delta(A, b) = A\$</p>
+</div>
+<div class="paragraph">
+<p>digambarkan dengan:</p>
+</div>
+<div id="img-dfa" class="imageblock">
+<div class="content">
+<a class="image" href="/assets/img/Screenshot_20211204_211458.png"><img src="/assets/img/Screenshot_20211204_211458.png" alt="DFA"></a>
+</div>
+<div class="title">Figure 1. A simple DFA</div>
+</div>
+<div class="paragraph">
+<p>String \$x \in \Sigma^{\ast}\$ akan di terima oleh DFA \$M = (Q, \Sigma,
+\delta, q_0, F) \iff \delta^{\ast}(q_0, x) \in F\$.</p>
+</div>
+<div class="paragraph">
+<p>Untuk DFA \$M = (Q, \Sigma, \delta, q_0, F)\$, \$L(M)\$ adalah language
+yang bisa diterima oleh \$M\$, di mana \$L(M) = {x \in \Sigma^{\ast} |
+\delta^{\ast}(q_0, x) \in F}\$.</p>
+</div>
+<div class="paragraph">
+<p>Regular language adalah language yang diterima oleh sebuah finite automata, atau
+sebuah regular language adalah \$L(M)\$ untuk suatu DFA \$M\$.</p>
+</div>
+<div class="paragraph">
+<p><em>Regular operation</em> adalah operasi pada language. Misalnya A dan B adalah
+language, maka operasinya:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>union, \$A \cap B = {x | x \in A or x \in B}\$,</p>
+</li>
+<li>
+<p>concatenation, \$A \cdot B = {xy | x \in A and y \in B}\$,</p>
+</li>
+<li>
+<p>star, \$A^{\ast} = {x_1 x_2 \cdots x_k | k \geq 0 \and, \forall x_i \in
+A}\$.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Sifat rl:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>closed under complement, jika \$L\$ adalah language dari \$\Sigma\$,
+maka komplemen dari \$L\$, \$\overline{L} = {x \in \Sigma^{\ast} | x
+\notin L}\$, jika \$L\$ adalah regular language, maka \$\overline{L}\$ juga
+adalah regular language.</p>
+</li>
+<li>
+<p>closed under intersection, jika \$L_1\$ dan \$L_2\$ adalah language,
+intersection (irisan) dari \$L_1\$ dan \$L_2\$ adalah \$L_1 \cap L_2
+= {x | x \in L_1 \and x \in L_2}\$, jika \$L_1\$ dan \$L_2\$ adalah
+regular language, maka \$L_1 \cap L_2\$ juga adalah merupakan regular
+language.</p>
+</li>
+<li>
+<p>closed under union, jika \$L_1\$ dan \$L_2\$ adalah language,
+union (gabungan) dari \$L_1\$ dan \$L_2\$ adalah \$L_1 \cup L_2
+= {x | x \in L_1 \or x \in L_2, \text{atau keduanya}}\$, jika \$L_1\$ dan
+\$L_2\$ adalah regular language, maka \$L_1 \cup L_2\$ juga adalah
+merupakan regular language.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="b-nondeterministic-finite-automata"><a class="anchor" href="#b-nondeterministic-finite-automata"></a>b. Nondeterministic Finite Automata</h3>
+<div class="paragraph">
+<p>NFA \$M = (Q, \Sigma, \delta, q_0, F)\$ dimana:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>\$Q\$ adalah set semua state (finite),</p>
+</li>
+<li>
+<p>\$\Sigma\$ adalah alfabet/ input (finite set symbols),</p>
+</li>
+<li>
+<p>\$\delta \in (Q xx (\Sigma \cup {\epsilon}) \to P(Q))\$ adalah fungsi
+transisi,</p>
+</li>
+<li>
+<p>\$q_0 \in Q\$ adalah start state,</p>
+</li>
+<li>
+<p>\$F \subseteq Q\$ adalah set state final (<em>accepting state</em>).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Contohnya: \$Q = {q_0, q_1, q_2}\$, \$\Sigma = {a, b}\$, \$F = {q_2}\$
+dan \$\delta\$ =<br>
+\$\delta(q_0, a) = {q_0, q_1}\$<br>
+\$\delta(q_0, b) = {q_0}\$<br>
+\$\delta(q_0, \epsilon) = {q_2}\$<br>
+\$\delta(q_1, a) = {}\$<br>
+\$\delta(q_1, b) = {q_2}\$<br>
+\$\delta(q_1, \epsilon) = {}\$<br>
+\$\delta(q_2, a) = {}\$<br>
+\$\delta(q_2, b) = {}\$<br>
+\$\delta(q_2, \epsilon) = {}\$</p>
+</div>
+<div class="paragraph">
+<p>digambarkan dengan:</p>
+</div>
+<div id="img-nfa" class="imageblock">
+<div class="content">
+<a class="image" href="/assets/img/Screenshot_20211207_113854.png"><img src="/assets/img/Screenshot_20211207_113854.png" alt="NFA"></a>
+</div>
+<div class="title">Figure 2. A simple NFA</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="conver-nfa-to-dfa"><a class="anchor" href="#conver-nfa-to-dfa"></a>conver NFA to DFA</h3>
+<div class="paragraph">
+<p>lorem</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="minimization-of-dfa"><a class="anchor" href="#minimization-of-dfa"></a>minimization of DFA</h3>
+<div class="paragraph">
+<p>Myhill Nerode Theorem for minimization DFA</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="regular-expression"><a class="anchor" href="#regular-expression"></a>Regular Expression</h3>
+
+</div>
+<div class="sect2">
+<h3 id="mealy-and-moore-machine"><a class="anchor" href="#mealy-and-moore-machine"></a>Mealy and Moore Machine</h3>
+<div class="sect3">
+<h4 id="convert-melay-to-moore-and-the-opposite"><a class="anchor" href="#convert-melay-to-moore-and-the-opposite"></a>convert Melay to Moore and the opposite</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="epsilon-nfa"><a class="anchor" href="#epsilon-nfa"></a>\$\epsilon\$ NFA</h3>
+<div class="sect3">
+<h4 id="epsilon-nfa-to-nfa"><a class="anchor" href="#epsilon-nfa-to-nfa"></a>\$\epsilon\$ NFA to NFA</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="nonregular-languages"><a class="anchor" href="#nonregular-languages"></a>Nonregular Languages</h3>
+
+</div>
+</div>
+</div>]]></content><author><name></name></author><category term="Teori Komputasi" /></entry><entry><title type="html">ToC - intro</title><link href="https://deo.or.id/2021/12/03/intro-toc.html" rel="alternate" type="text/html" title="ToC - intro" /><published>2021-12-03T00:00:00+08:00</published><updated>2021-12-03T00:00:00+08:00</updated><id>https://deo.or.id/2021/12/03/intro-toc</id><content type="html" xml:base="https://deo.or.id/2021/12/03/intro-toc.html"><![CDATA[<div class="sect1">
+<h2 id="latar-belakang"><a class="anchor" href="#latar-belakang"></a>Latar belakang</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sebenarnya, dari tahun 2019 saya sudah ingin mempelajari tentang teori
+komputasi. Hal ini bermula saat teman-teman Ilkom'16 mengambil matkul tekom,
+namun saya sendiri tidak sempat mengambil matkul tersebut akibat banyaknya
+matkul yang saya ambil pada semester itu.</p>
+</div>
+<div class="paragraph">
+<p>Sehingga saya memutuskan untuk belajar tekom secara mandiri melalui buku dan
+youtube. Buku yang saya baca adalah:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Formal Language - A Practical Introduction</strong> oleh Adam Brooks Webber</p>
+</li>
+<li>
+<p><strong>Introduction to the theory of computation</strong> oleh Michael Sipser</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>dan dari beberapa channel youtube seperti Neso Academy.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="materi"><a class="anchor" href="#materi"></a>Materi</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Alfabet adalah finite set simbol, contohnya \$\Sigma = {a, b}\$ adalah set
+simbol dari \$a\$ dan \$b\$,</p>
+</li>
+<li>
+<p>String adalah urutan rangkaian simbol (kosong sampai infinity simbol),
+contohnya \$aaaa\$ dan \$10001\$. Dengan \$|ab| = 2\$, \$|\epsilon|
+= 0\$, 'zero' ("the string of no symbols"). \${} \neq {\epsilon}\$.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>\[\begin{aligned}
+x^n &amp;= xx \cdots x, \text{n times} \\
+x^0 &amp;= \epsilon \\
+x^1 &amp;= x \\
+x^2 &amp;= xx
+\end{aligned}\]</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Languages adalah set string atas fixed alfabet, dengan \$\Sigma^{\ast}\$
+adalah set semua string atas \$\Sigma\$ (<em>Kleene closure</em>), contohnya
+\${a^{\ast}} = {\epsilon, a, aa, aaa, ...}\$. Dengan menggunakan
+\$x \in \Sigma^{\ast}\$ adalah \$x\$ atas alfabet \$\Sigma\$.</p>
+<div class="paragraph">
+<p>Kecuali \$\Sigma = {}\$, Kleene closure atas alfabet adalah infinity set.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>]]></content><author><name></name></author><category term="Teori Komputasi" /></entry><entry><title type="html">Buble Sort</title><link href="https://deo.or.id/2021/11/11/buble-sort.html" rel="alternate" type="text/html" title="Buble Sort" /><published>2021-11-11T00:00:00+08:00</published><updated>2021-11-11T00:00:00+08:00</updated><id>https://deo.or.id/2021/11/11/buble-sort</id><content type="html" xml:base="https://deo.or.id/2021/11/11/buble-sort.html"><![CDATA[<div class="sect1">
+<h2 id="pendahuluan"><a class="anchor" href="#pendahuluan"></a>Pendahuluan</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bubble Sort adalah algoritma pengurutan paling sederhana yang bekerja dengan
+menukar elemen yang berdekatan secara bergantian. Bubble sort akan memuat
+iterasi atau perulangan sebanyak n-1, dimana n adalah jumlah elemen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cara-kerja"><a class="anchor" href="#cara-kerja"></a>Cara Kerja</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Misalkan kita mempunyai 4 elemen, yaitu {50, 20, 10}</p>
+</div>
+<div class="paragraph">
+<p>Iterasi pertama :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>{<strong>50</strong>, <strong>20</strong>, 10} &#8658; {<strong>20</strong>, <strong>50</strong>, 10}</p>
+</li>
+<li>
+<p>{20, <strong>50</strong>, <strong>10</strong>} &#8658; {20, <strong>10</strong>, <strong>50</strong>}</p>
+</li>
+<li>
+<p>{<strong>20</strong>, <strong>10</strong>, 50} &#8658; {<strong>10</strong>, <strong>20</strong>, 50}</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Hasilnya = {10, 20, 50}, terdapat 3 perulangan.</p>
+</div>
+<div class="paragraph">
+<p>Dalam program, kita dapat menggunakan logika untuk menukar/swap index,</p>
+</div>
+<div class="paragraph">
+<p>Misalkan kita mempunyai a = 10 dan b = 20.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="n">temp</span>    <span class="o">=</span> <span class="n">a</span> <span class="p">(</span><span class="n">temp</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">a</span>       <span class="o">=</span> <span class="n">b</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">b</span>       <span class="o">=</span> <span class="n">temp</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>atau</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Referensi</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://www.geeksforgeeks.org/bubble-sort/" class="bare">https://www.geeksforgeeks.org/bubble-sort/</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/playlist?list=PLLOxZwkBK52CY_b7jorivUjYzjhoMA_6Z" class="bare">https://www.youtube.com/playlist?list=PLLOxZwkBK52CY_b7jorivUjYzjhoMA_6Z</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>]]></content><author><name></name></author><category term="Algoritma" /></entry><entry><title type="html">Tata Krama Mahasiswa</title><link href="https://deo.or.id/2021/11/11/tata-krama-mahasiswa.html" rel="alternate" type="text/html" title="Tata Krama Mahasiswa" /><published>2021-11-11T00:00:00+08:00</published><updated>2021-11-11T00:00:00+08:00</updated><id>https://deo.or.id/2021/11/11/tata-krama-mahasiswa</id><content type="html" xml:base="https://deo.or.id/2021/11/11/tata-krama-mahasiswa.html"><![CDATA[<div class="imageblock">
+<div class="content">
+<a class="image" href="/assets/img/tata-krama-mahasiswa.jpeg"><img src="/assets/img/tata-krama-mahasiswa.jpeg" alt="Tata krama mahasiswa"></a>
+</div>
+<div class="title">Figure 1. Tata krama mahasiswa</div>
+</div>
+<div class="paragraph">
+<p>Bagaimana mahasiswa dapat berkomunikasi dengan baik dengan dosennya.</p>
+</div>
+<div class="paragraph">
+<p>sumber:
+<a href="https://akcdn.detik.net.id/community/media/visual/2017/10/06/17629eb5-4188-4fe4-8f8a-3e566f3b4ec1.jpeg?w=700&amp;q=90">detik.net.id</a></p>
+</div>]]></content><author><name></name></author><category term="Artikel" /></entry></feed>
