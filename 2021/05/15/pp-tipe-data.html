@@ -1,360 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat.">
-    <meta name="author" content="Deo Valiandro. M">
-    <title>Tipe Data</title>
-    <style>@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:transparent}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style>
-    <link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css">
-    <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css"
-    integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-</head>
-<style>@media only screen and (max-width: 600px){body{margin: 5%}}</style>
-<body><main>
-  <div class="navigation">
-    [<a href="/" class="email">/home</a>]
-    [<a href="/todo.html" class="email">/todo</a>]
-    [<a href="/link.html" class="email">/link</a>]
-    [<a href="/pp.html" class="email">/pp</a>]
-    [<a href="/pbo.html" class="email">/pbo</a>]
-    [<a href="/sisfok.html" class="email">/sisfok-team</a>]
-    [<a href="#" onclick="switchTheme();" class="email" id="changeTheme"></a>]
-  </div>
-  <h1>Tipe Data</h1>
-  
-  
-  
-  <p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com&gt;</code></p>
-  
-  <div class="paragraph">
-<p>Java merupakan bahasa pemrograman yang strongly typed (setiap data harus
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat."><meta name="author" content="Deo Valiandro. M"><title>Tipe Data</title><style>@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";@import "https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css";:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:initial}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style><link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"><script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous"></head><style>@media only screen and (max-width:600px){body{margin:5%}}</style><body><main><div class="navigation">[<a href="/" class="email">/home</a>]
+[<a href="/todo.html" class="email">/todo</a>]
+[<a href="/link.html" class="email">/link</a>]
+[<a href="/pp.html" class="email">/pp</a>]
+[<a href="/pbo.html" class="email">/pbo</a>]
+[<a href="/sisfok.html" class="email">/sisfok-team</a>]
+[<a href="#" onclick="switchTheme()" class="email" id="changeTheme"></a>]</div><h1>Tipe Data</h1><p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com></code></p><div class="paragraph"><p>Java merupakan bahasa pemrograman yang strongly typed (setiap data harus
 diberikan tipe data), maka kita tidak bisa mengabaikan tipe data. Kita harus
 tahu data seperti apa yang disimpan ke dalam variabel. Selain itu, Java juga
 bersifat statically typed, yang artinya setiap variabel harus dideklarasikan
-terlebih dahulu sebelum digunakan.</p>
-</div>
-<div class="sect1">
-<h2 id="tipe-data-primitif"><a class="anchor" href="#tipe-data-primitif"></a>Tipe Data Primitif</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Tipe data primitif adalah tipe data standar yang tidak diturunkan dari objek
+terlebih dahulu sebelum digunakan.</p></div><div class="sect1"><h2 id="tipe-data-primitif"><a class="anchor" href="#tipe-data-primitif"></a>Tipe Data Primitif</h2><div class="sectionbody"><div class="paragraph"><p>Tipe data primitif adalah tipe data standar yang tidak diturunkan dari objek
 manapun. Tipe data primitif telah ditentukan dengan kata kuncinya masing-masing.
-Terdapat 8 (delapan) tipe data primitif yang Java dukung, antara lain:</p>
-</div>
-<div class="sect2">
-<h3 id="integer"><a class="anchor" href="#integer"></a>Integer</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>byte, tipe data yang menampung angka 8 bit dengan range -127 - 128
-(\$2^8\$). Tipe data byte memiliki nilai default <code>0</code>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+Terdapat 8 (delapan) tipe data primitif yang Java dukung, antara lain:</p></div><div class="sect2"><h3 id="integer"><a class="anchor" href="#integer"></a>Integer</h3><div class="olist arabic"><ol class="arabic"><li><p>byte, tipe data yang menampung angka 8 bit dengan range -127 - 128
+(\$2^8\$). Tipe data byte memiliki nilai default <code>0</code>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">byte</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>short, tipe data yang menampung angka 16 bit dengan range -32.768 - 32.767
-(\$2^{16}\$). Tipe data byte memiliki nilai default <code>0</code>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div></li><li><p>short, tipe data yang menampung angka 16 bit dengan range -32.768 - 32.767
+(\$2^{16}\$). Tipe data byte memiliki nilai default <code>0</code>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">short</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1200</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>int, tipe data yang menampung angka 32 bit dengan range -2,147,483,648 -
-2,147,483,647 (\$2^{32}\$). Tipe data byte memiliki nilai default <code>0</code>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div></li><li><p>int, tipe data yang menampung angka 32 bit dengan range -2,147,483,648 -
+2,147,483,647 (\$2^{32}\$). Tipe data byte memiliki nilai default <code>0</code>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">289000</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>long, tipe data yang lebih panjang dari int, yaitu -9,223,372,036,854,775,808
+</pre></td></tr></tbody></table></code></pre></div></div></li><li><p>long, tipe data yang lebih panjang dari int, yaitu -9,223,372,036,854,775,808
 sampai 9,223,372,036,854,775,807 (\$2^{64}\$). Tipe data long memiliki nilai
-default <code>0L</code>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+default <code>0L</code>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">long</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">122334445</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="floating-point-numbers"><a class="anchor" href="#floating-point-numbers"></a>Floating-point numbers</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>float tipe data untuk bilangan desimal seperti 3.14, 2.1 atau bilangan desimal lainnya. Tipe data ini bisa nemapung nilai \$2^{32}\$. Nilai default-nya
-<code>0.0f</code>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div></li></ol></div></div><div class="sect2"><h3 id="floating-point-numbers"><a class="anchor" href="#floating-point-numbers"></a>Floating-point numbers</h3><div class="olist arabic"><ol class="arabic"><li><p>float tipe data untuk bilangan desimal seperti 3.14, 2.1 atau bilangan desimal lainnya. Tipe data ini bisa nemapung nilai \$2^{32}\$. Nilai default-nya
+<code>0.0f</code>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">float</span> <span class="n">n</span> <span class="o">=</span> <span class="mf">3.14f</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>penulisannya ditambahkan huruf <code>f</code> di belakang angkanya, ini untuk menandai
-bahwa bilangan tersebut adalah <code>float</code> bukan <code>double</code>.</p>
-</div>
-</li>
-<li>
-<p>double, tipe data yang mirip dengan float kecuali data yang bisa ditampungnya
-lebih besar yaitu \$2^{64}\$. Nilai default-nya <code>0.0d</code>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>penulisannya ditambahkan huruf <code>f</code> di belakang angkanya, ini untuk menandai
+bahwa bilangan tersebut adalah <code>float</code> bukan <code>double</code>.</p></div></li><li><p>double, tipe data yang mirip dengan float kecuali data yang bisa ditampungnya
+lebih besar yaitu \$2^{64}\$. Nilai default-nya <code>0.0d</code>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">double</span> <span class="n">n</span> <span class="o">=</span> <span class="mf">144.2</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="characters"><a class="anchor" href="#characters"></a>Characters</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>char, tipe data yang hanya bisa menampung satu karakter]. Nilai yang bisa
+</pre></td></tr></tbody></table></code></pre></div></div></li></ol></div></div><div class="sect2"><h3 id="characters"><a class="anchor" href="#characters"></a>Characters</h3><div class="olist arabic"><ol class="arabic"><li><p>char, tipe data yang hanya bisa menampung satu karakter]. Nilai yang bisa
 ditampung adalah 0 to 65,535. Char digunakan untuk menampung karakter Unicode
-<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">'a'</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Nilai yang diberikan disimpan dalam satu tanda kutip. Nilai defaulnya adalah
-<code>\u0000</code>.</p>
-</div>
-<div class="paragraph">
-<p>Char dalam spesifikasi resminya tergolong kedalam <em>integer type</em> yang termasuk
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Nilai yang diberikan disimpan dalam satu tanda kutip. Nilai defaulnya adalah
+<code>\u0000</code>.</p></div><div class="paragraph"><p>Char dalam spesifikasi resminya tergolong kedalam <em>integer type</em> yang termasuk
 dalam kategori int, short, dll. Namun karena prinsipnya yang digunakan untuk
 menampung karakter Unicode, maka dibuat dalam kategori tersendiri
 <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>. Sehingga char
-dapat ditulis seperti ini:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+dapat ditulis seperti ini:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">88</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>yang mana akan menghasilkan nilai <code>X</code>
-<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="boolean"><a class="anchor" href="#boolean"></a>Boolean</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Boolean, tipe data yang bisa menampung dua nilai, yaitu <code>benar</code> atau <code>salah</code>.
-Tipe data ini akan banyak digunakan kemudian. Nilai default-nya <code>false</code>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>yang mana akan menghasilkan nilai <code>X</code>
+<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.</p></div></li></ol></div></div><div class="sect2"><h3 id="boolean"><a class="anchor" href="#boolean"></a>Boolean</h3><div class="olist arabic"><ol class="arabic"><li><p>Boolean, tipe data yang bisa menampung dua nilai, yaitu <code>benar</code> atau <code>salah</code>.
+Tipe data ini akan banyak digunakan kemudian. Nilai default-nya <code>false</code>.</p><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="tipe-data-reference"><a class="anchor" href="#tipe-data-reference"></a>Tipe Data Reference</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Tipe data reference merupakan sebuah tipe data yang merujuk ke sebuah objek atau
+</pre></td></tr></tbody></table></code></pre></div></div></li></ol></div></div></div></div><div class="sect1"><h2 id="tipe-data-reference"><a class="anchor" href="#tipe-data-reference"></a>Tipe Data Reference</h2><div class="sectionbody"><div class="paragraph"><p>Tipe data reference merupakan sebuah tipe data yang merujuk ke sebuah objek atau
 instance dari sebuah class. Salah satu tipe data yang termasuk ke dalam tipe
 data reference adalah <code>string</code>. Tipe data string menunjuk ke instance dari class
-<code>java.lang.String</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="string"><a class="anchor" href="#string"></a>String</h3>
-<div class="paragraph">
-<p>String adalah tipe data yang menampung karakter. String bisa menampung lebih
-dari satu karakter, misalnya kata, kalimat atau paragraf.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+<code>java.lang.String</code>.</p></div><div class="sect2"><h3 id="string"><a class="anchor" href="#string"></a>String</h3><div class="paragraph"><p>String adalah tipe data yang menampung karakter. String bisa menampung lebih
+dari satu karakter, misalnya kata, kalimat atau paragraf.</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Deo"</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>perhatikan, penulisan <code>String</code> menggunakan kapital di awal kata, kemudian isinya
-disimpan di dalam tanda kutip dua ("&#8230;&#8203;").</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="deklarasi-variabel"><a class="anchor" href="#deklarasi-variabel"></a>Deklarasi variabel</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Sebuah data dapat disimpan ke dalam variabel. Format penulisannya sebagai
-berikut:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>perhatikan, penulisan <code>String</code> menggunakan kapital di awal kata, kemudian isinya
+disimpan di dalam tanda kutip dua ("&#8230;&#8203;").</p></div></div></div></div><div class="sect1"><h2 id="deklarasi-variabel"><a class="anchor" href="#deklarasi-variabel"></a>Deklarasi variabel</h2><div class="sectionbody"><div class="paragraph"><p>Sebuah data dapat disimpan ke dalam variabel. Format penulisannya sebagai
+berikut:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="n">type</span> <span class="n">namaVariabel</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deklarasi"><a class="anchor" href="#deklarasi"></a>Deklarasi</h3>
-<div class="paragraph">
-<p>Deklarasi adalah pembuatan sebuah variabel, namun belum di isi dengan suatu
-nilai. Contoh:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="sect2"><h3 id="deklarasi"><a class="anchor" href="#deklarasi"></a>Deklarasi</h3><div class="paragraph"><p>Deklarasi adalah pembuatan sebuah variabel, namun belum di isi dengan suatu
+nilai. Contoh:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">n</span><span class="o">;</span>
 <span class="kt">boolean</span> <span class="n">b</span><span class="o">;</span>
 <span class="kt">char</span> <span class="n">c</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="inisiasi"><a class="anchor" href="#inisiasi"></a>Inisiasi</h3>
-<div class="paragraph">
-<p>Inisiasi adalah pengisian sebuah variabel dengan data. Contoh:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div></div><div class="sect2"><h3 id="inisiasi"><a class="anchor" href="#inisiasi"></a>Inisiasi</h3><div class="paragraph"><p>Inisiasi adalah pengisian sebuah variabel dengan data. Contoh:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="code"><pre><span class="n">n</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 <span class="n">c</span> <span class="o">=</span> <span class="sc">'A'</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Deklarasi sekaligus inisiasi juga dapat dilakukan, misalnya dengan:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Deklarasi sekaligus inisiasi juga dapat dilakukan, misalnya dengan:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 </pre></td><td class="code"><pre><span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">21.0f</span><span class="o">;</span>
 <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="inisiasi-dinamis"><a class="anchor" href="#inisiasi-dinamis"></a>Inisiasi dinamis</h3>
-<div class="paragraph">
-<p>Dua atau lebih data dapat di isi secara bersamaan dalam satu baris dengan syarat
-tipe datanya sama. Contoh:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div></div><div class="sect2"><h3 id="inisiasi-dinamis"><a class="anchor" href="#inisiasi-dinamis"></a>Inisiasi dinamis</h3><div class="paragraph"><p>Dua atau lebih data dapat di isi secara bersamaan dalam satu baris dengan syarat
+tipe datanya sama. Contoh:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">12</span><span class="o">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">13</span><span class="o">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">14</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>atau bisa juga jika semua data memiliki nilai yang sama, misalnya:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>atau bisa juga jika semua data memiliki nilai yang sama, misalnya:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="mengubah-tipe-ke-tipe-data-lain"><a class="anchor" href="#mengubah-tipe-ke-tipe-data-lain"></a>Mengubah tipe ke tipe data lain</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Suatu tipe data dapat di ubah ke tipe data lain, misalnya dari byte ke int.
-Syaratnya adalah:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>kedua tipe data kompatible, misalnya antara byte dengan int, int dengan
-float, tetapi char dan boolean tidak memiliki kompatible.</p>
-</li>
-<li>
-<p>tipe data yang dituju memiliki ruang penyimpanan yang lebih besar, misalnya
+</pre></td></tr></tbody></table></code></pre></div></div></div></div></div><div class="sect1"><h2 id="mengubah-tipe-ke-tipe-data-lain"><a class="anchor" href="#mengubah-tipe-ke-tipe-data-lain"></a>Mengubah tipe ke tipe data lain</h2><div class="sectionbody"><div class="paragraph"><p>Suatu tipe data dapat di ubah ke tipe data lain, misalnya dari byte ke int.
+Syaratnya adalah:</p></div><div class="ulist"><ul><li><p>kedua tipe data kompatible, misalnya antara byte dengan int, int dengan
+float, tetapi char dan boolean tidak memiliki kompatible.</p></li><li><p>tipe data yang dituju memiliki ruang penyimpanan yang lebih besar, misalnya
 byte memiliki ruang penyimpanan \$2^8\$, akan diubah ke int yang memiliki
 penyimpanan \$2^{32}\$. Tetapi jika dari tipe data int ke byte, maka jika
 nilai yang akan diubah lebih besar dari \$2^8\$, maka akan menyebabkan
-nilai akhir adalah hasil modulo dari ukuran byte.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Cara mengubah tipe data dapat dicontohkan sebagai berikut:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+nilai akhir adalah hasil modulo dari ukuran byte.</p></li></ul></div><div class="paragraph"><p>Cara mengubah tipe data dapat dicontohkan sebagai berikut:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 </pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span>
 <span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">n</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Bagaimana jika int ke float, silahkan coba sendiri.</p>
-</div>
-<div class="sect2">
-<h3 id="konversi-otomatis"><a class="anchor" href="#konversi-otomatis"></a>Konversi otomatis</h3>
-<div class="paragraph">
-<p>Misalnya terdapat a, b, c yang merupakan byte, kemudian dilakukan operasi sebagai
-berikut:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Bagaimana jika int ke float, silahkan coba sendiri.</p></div><div class="sect2"><h3 id="konversi-otomatis"><a class="anchor" href="#konversi-otomatis"></a>Konversi otomatis</h3><div class="paragraph"><p>Misalnya terdapat a, b, c yang merupakan byte, kemudian dilakukan operasi sebagai
+berikut:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -362,66 +97,7 @@ berikut:</p>
 <span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">50</span><span class="o">;</span>
 <span class="kt">byte</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">/</span> <span class="n">c</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>maka nilai a, b dan c akan otomatis diubah menjadi int.</p>
-</div>
-<div class="paragraph">
-<p>Aturan promosi ini adalah:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>byte, short, char akan di ubah ke int,</p>
-</li>
-<li>
-<p>jika operasinya adalah long, maka akan diubah ke long,</p>
-</li>
-<li>
-<p>float akan di ubah ke double,</p>
-</li>
-<li>
-<p>jika operasi melibatkan double, maka otomatis akan diubah semua ke double.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. <a href="http://www.unicode.org" class="bare">http://www.unicode.org</a>
-</div>
-<div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. Java: The Complete Reference, 10th Edition page 98
-</div>
-<div class="footnote" id="_footnotedef_3">
-<a href="#_footnoteref_3">3</a>. 98 adalah nilai desimal dari X dalam sistem ASCII dan Unicode
-</div>
-</div>
-  <hr><footer>
-    <p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a
-            href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p>
-</footer>
-<script src="/assets/js/js.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>maka nilai a, b dan c akan otomatis diubah menjadi int.</p></div><div class="paragraph"><p>Aturan promosi ini adalah:</p></div><div class="olist arabic"><ol class="arabic"><li><p>byte, short, char akan di ubah ke int,</p></li><li><p>jika operasinya adalah long, maka akan diubah ke long,</p></li><li><p>float akan di ubah ke double,</p></li><li><p>jika operasi melibatkan double, maka otomatis akan diubah semua ke double.</p></li></ol></div></div></div></div><div id="footnotes"><hr><div class="footnote" id="_footnotedef_1"><a href="#_footnoteref_1">1</a>. <a href="http://www.unicode.org" class="bare">http://www.unicode.org</a></div><div class="footnote" id="_footnotedef_2"><a href="#_footnoteref_2">2</a>. Java: The Complete Reference, 10th Edition page 98</div><div class="footnote" id="_footnotedef_3"><a href="#_footnoteref_3">3</a>. 98 adalah nilai desimal dari X dalam sistem ASCII dan Unicode</div></div><hr><footer><p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p></footer><script src="/assets/js/js.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          delimiters: [
-              {left: '$$', right: '$', display: true},
-              {left: '$', right: '$', display: false},
-          ],
-          throwOnError : true,
-          trust: true
-        });
-    });
-</script></main>
-</body>
-</html>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!0,trust:!0})})</script></main></body></html>

@@ -1,101 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat.">
-    <meta name="author" content="Deo Valiandro. M">
-    <title>Perulangan</title>
-    <style>@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:transparent}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style>
-    <link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css">
-    <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css"
-    integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-</head>
-<style>@media only screen and (max-width: 600px){body{margin: 5%}}</style>
-<body><main>
-  <div class="navigation">
-    [<a href="/" class="email">/home</a>]
-    [<a href="/todo.html" class="email">/todo</a>]
-    [<a href="/link.html" class="email">/link</a>]
-    [<a href="/pp.html" class="email">/pp</a>]
-    [<a href="/pbo.html" class="email">/pbo</a>]
-    [<a href="/sisfok.html" class="email">/sisfok-team</a>]
-    [<a href="#" onclick="switchTheme();" class="email" id="changeTheme"></a>]
-  </div>
-  <h1>Perulangan</h1>
-  
-  
-  
-  <p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com&gt;</code></p>
-  
-  <div class="paragraph">
-<p>Perulangan (Looping) adalah suatu blok kode yang akan terus berjalan selama
-syarat yang diberikan masih memenuhi.</p>
-</div>
-<div class="paragraph">
-<p>Setiap perulangan memiliki empat bagian, yaitu <code>inisialisasi</code>, <code>body</code>,
-<code>iterasi</code>, dan <code>terminasi/kondisi</code>.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Inisialisasi adalah statement yang menyatakan keadaan awal sebuah perulangan.</p>
-</li>
-<li>
-<p>Body atau badan program adalah blok statement yang akan dijalankan terus
-menerus selama perulangan berlangsung.</p>
-</li>
-<li>
-<p>Iterasi adalah statement atau bagian program yang nilainya terus berubah
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat."><meta name="author" content="Deo Valiandro. M"><title>Perulangan</title><style>@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";@import "https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css";:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:initial}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style><link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"><script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous"></head><style>@media only screen and (max-width:600px){body{margin:5%}}</style><body><main><div class="navigation">[<a href="/" class="email">/home</a>]
+[<a href="/todo.html" class="email">/todo</a>]
+[<a href="/link.html" class="email">/link</a>]
+[<a href="/pp.html" class="email">/pp</a>]
+[<a href="/pbo.html" class="email">/pbo</a>]
+[<a href="/sisfok.html" class="email">/sisfok-team</a>]
+[<a href="#" onclick="switchTheme()" class="email" id="changeTheme"></a>]</div><h1>Perulangan</h1><p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com></code></p><div class="paragraph"><p>Perulangan (Looping) adalah suatu blok kode yang akan terus berjalan selama
+syarat yang diberikan masih memenuhi.</p></div><div class="paragraph"><p>Setiap perulangan memiliki empat bagian, yaitu <code>inisialisasi</code>, <code>body</code>,
+<code>iterasi</code>, dan <code>terminasi/kondisi</code>.</p></div><div class="olist arabic"><ol class="arabic"><li><p>Inisialisasi adalah statement yang menyatakan keadaan awal sebuah perulangan.</p></li><li><p>Body atau badan program adalah blok statement yang akan dijalankan terus
+menerus selama perulangan berlangsung.</p></li><li><p>Iterasi adalah statement atau bagian program yang nilainya terus berubah
 (ascending, descending atau cara lainnya) untuk mencapai batas atau keadaan
-untuk berhenti.</p>
-</li>
-<li>
-<p>Terminasi atau kondisi adalah statement bernilai Boolean yang menyatakan
-batas atau keadaan untuk menghentikan perulangan.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Pada Java dikenal tiga macam bentuk perulangan, yaitu: <code>while</code>, <code>do-while</code>, dan
-<code>for</code>.</p>
-</div>
-<div class="paragraph">
-<p>Pada dasarnya semua perulangan dalam Java memiliki cara kerja yang sama
+untuk berhenti.</p></li><li><p>Terminasi atau kondisi adalah statement bernilai Boolean yang menyatakan
+batas atau keadaan untuk menghentikan perulangan.</p></li></ol></div><div class="paragraph"><p>Pada Java dikenal tiga macam bentuk perulangan, yaitu: <code>while</code>, <code>do-while</code>, dan
+<code>for</code>.</p></div><div class="paragraph"><p>Pada dasarnya semua perulangan dalam Java memiliki cara kerja yang sama
 yaitu selama kondisi masih bernilai true maka perulangan akan terus dilakukan
-hinggi kondisi bernilai false.</p>
-</div>
-<div class="sect1">
-<h2 id="for"><a class="anchor" href="#for"></a>For</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For adalah perulangan yang banyaknya perulangan diketahui atau banyaknya
-perulangan sudah jelas(tentu).</p>
-</div>
-<div class="paragraph">
-<p>Bentuk umum:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+hinggi kondisi bernilai false.</p></div><div class="sect1"><h2 id="for"><a class="anchor" href="#for"></a>For</h2><div class="sectionbody"><div class="paragraph"><p>For adalah perulangan yang banyaknya perulangan diketahui atau banyaknya
+perulangan sudah jelas(tentu).</p></div><div class="paragraph"><p>Bentuk umum:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="code"><pre><span class="k">for</span> <span class="o">(</span><span class="n">inisialisasi</span><span class="o">;</span> <span class="n">kondisi</span><span class="o">;</span> <span class="n">iterasi</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">//body</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Contoh:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Contoh:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -105,24 +31,8 @@ perulangan sudah jelas(tentu).</p>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="while"><a class="anchor" href="#while"></a>While</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>While adalah perulangan yang banyaknya perulangan tidak menentu dan lebih
-sederhana dari pada perulangan for.</p>
-</div>
-<div class="paragraph">
-<p>Bentuk umum:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div></div></div><div class="sect1"><h2 id="while"><a class="anchor" href="#while"></a>While</h2><div class="sectionbody"><div class="paragraph"><p>While adalah perulangan yang banyaknya perulangan tidak menentu dan lebih
+sederhana dari pada perulangan for.</p></div><div class="paragraph"><p>Bentuk umum:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -134,15 +44,7 @@ sederhana dari pada perulangan for.</p>
     <span class="c1">//body</span>
     <span class="nc">Iterasi</span><span class="o">;</span> <span class="c1">//opsional</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Contoh:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Contoh:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -156,29 +58,10 @@ sederhana dari pada perulangan for.</p>
     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
     <span class="n">i</span><span class="o">++;</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="do-while"><a class="anchor" href="#do-while"></a>Do-while</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Pada perulangan ini bagian body (semua dalam kurung kurawal setelah "do")
-dijalankan terlebih dahulu sebelum pengecekan kondisi.</p>
-</div>
-<div class="paragraph">
-<p>Sehingga walaupun kondisi dari awal bernilai false, bagian body tetap dijalankan
+</pre></td></tr></tbody></table></code></pre></div></div></div></div><div class="sect1"><h2 id="do-while"><a class="anchor" href="#do-while"></a>Do-while</h2><div class="sectionbody"><div class="paragraph"><p>Pada perulangan ini bagian body (semua dalam kurung kurawal setelah "do")
+dijalankan terlebih dahulu sebelum pengecekan kondisi.</p></div><div class="paragraph"><p>Sehingga walaupun kondisi dari awal bernilai false, bagian body tetap dijalankan
 sekali. Berbeda dengan perulangan while apabila kondisi diawal bernilai false
-maka bagian body tidak akan dijalankan.</p>
-</div>
-<div class="paragraph">
-<p>Bentuk umum:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+maka bagian body tidak akan dijalankan.</p></div><div class="paragraph"><p>Bentuk umum:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -190,15 +73,7 @@ maka bagian body tidak akan dijalankan.</p>
     <span class="c1">//body</span>
     <span class="nc">Iterasi</span><span class="o">;</span> <span class="c1">//opsional</span>
 <span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">kondisi</span><span class="o">);</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Contoh:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Contoh:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -214,38 +89,14 @@ maka bagian body tidak akan dijalankan.</p>
 <span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">)</span>
 
 <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="for-each"><a class="anchor" href="#for-each"></a>For-each</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For-each bukanlah keyword dari Java, melainkan cara yang lebih sederhana untuk
-membuat perulangan for.</p>
-</div>
-<div class="paragraph">
-<p>Bentuk umum:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div></div></div><div class="sect1"><h2 id="for-each"><a class="anchor" href="#for-each"></a>For-each</h2><div class="sectionbody"><div class="paragraph"><p>For-each bukanlah keyword dari Java, melainkan cara yang lebih sederhana untuk
+membuat perulangan for.</p></div><div class="paragraph"><p>Bentuk umum:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="code"><pre><span class="k">for</span> <span class="o">(</span><span class="n">type</span> <span class="kt">var</span><span class="o">:</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">statements</span> <span class="n">using</span> <span class="kt">var</span><span class="o">;</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Sama nilainya dengan</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Sama nilainya dengan</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -253,18 +104,7 @@ membuat perulangan for.</p>
     <span class="n">type</span> <span class="kt">var</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
     <span class="n">statements</span> <span class="n">using</span> <span class="kt">var</span><span class="o">;</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ini biasa digunakan pada array atau koleksi (seperti ArrayList).</p>
-</div>
-<div class="paragraph">
-<p>Contoh:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Ini biasa digunakan pada array atau koleksi (seperti ArrayList).</p></div><div class="paragraph"><p>Contoh:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -274,47 +114,7 @@ membuat perulangan for.</p>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="nl">i:</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Namun for-each memiliki batasan:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Tidak bisa digunakan jika ingin memodifikasi nilai array,</p>
-</li>
-<li>
-<p>Tidak bisa melacak nomor index,</p>
-</li>
-<li>
-<p>Hanya bisa melakukan perulangan kedepan sekali.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-  <hr><footer>
-    <p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a
-            href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p>
-</footer>
-<script src="/assets/js/js.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Namun for-each memiliki batasan:</p></div><div class="olist arabic"><ol class="arabic"><li><p>Tidak bisa digunakan jika ingin memodifikasi nilai array,</p></li><li><p>Tidak bisa melacak nomor index,</p></li><li><p>Hanya bisa melakukan perulangan kedepan sekali.</p></li></ol></div></div></div><hr><footer><p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p></footer><script src="/assets/js/js.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          delimiters: [
-              {left: '$$', right: '$', display: true},
-              {left: '$', right: '$', display: false},
-          ],
-          throwOnError : true,
-          trust: true
-        });
-    });
-</script></main>
-</body>
-</html>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!0,trust:!0})})</script></main></body></html>

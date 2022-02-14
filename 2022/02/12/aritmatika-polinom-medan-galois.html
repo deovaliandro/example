@@ -1,206 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat.">
-    <meta name="author" content="Deo Valiandro. M">
-    <title>Aritmatika Polinom di dalam Medan Galois $GF(2^n)$</title>
-    <style>@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:transparent}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style>
-    <link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css">
-    <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css"
-    integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-</head>
-<style>@media only screen and (max-width: 600px){body{margin: 5%}}</style>
-<body><main>
-  <div class="navigation">
-    [<a href="/" class="email">/home</a>]
-    [<a href="/todo.html" class="email">/todo</a>]
-    [<a href="/link.html" class="email">/link</a>]
-    [<a href="/pp.html" class="email">/pp</a>]
-    [<a href="/pbo.html" class="email">/pbo</a>]
-    [<a href="/sisfok.html" class="email">/sisfok-team</a>]
-    [<a href="#" onclick="switchTheme();" class="email" id="changeTheme"></a>]
-  </div>
-  <h1>Aritmatika Polinom di dalam Medan Galois $GF(2^n)$</h1>
-  
-  
-  
-  <p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com&gt;</code></p>
-  
-  <div class="paragraph">
-<p>Galois Field (GF) yang banyak digunakan dalam kriptografi adalah $GF(2^n)$
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat."><meta name="author" content="Deo Valiandro. M"><title>Aritmatika Polinom di dalam Medan Galois $GF(2^n)$</title><style>@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";@import "https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css";:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:initial}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style><link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"><script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous"></head><style>@media only screen and (max-width:600px){body{margin:5%}}</style><body><main><div class="navigation">[<a href="/" class="email">/home</a>]
+[<a href="/todo.html" class="email">/todo</a>]
+[<a href="/link.html" class="email">/link</a>]
+[<a href="/pp.html" class="email">/pp</a>]
+[<a href="/pbo.html" class="email">/pbo</a>]
+[<a href="/sisfok.html" class="email">/sisfok-team</a>]
+[<a href="#" onclick="switchTheme()" class="email" id="changeTheme"></a>]</div><h1>Aritmatika Polinom di dalam Medan Galois $GF(2^n)$</h1><p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com></code></p><div class="paragraph"><p>Galois Field (GF) yang banyak digunakan dalam kriptografi adalah $GF(2^n)$
 karena setiap baris text direpresentasikan sebagai barisan bit 0 dan 1 sepanjang
-$n$ bit.</p>
-</div>
-<div class="paragraph">
-<p>Semua elemen dalam $GF(2^n)$ dinyatakan dalam bentuk polinom.</p>
-</div>
-<div class="paragraph">
-<p>Bentuk umum polinom berderajat n adalah:</p>
-</div>
-<div class="paragraph">
-<p>$$f(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{2}x^{2} + a_{1}x + a_{0}$</p>
-</div>
-<div class="paragraph">
-<p>$a_{n}, a_{n-1}, a_{0}$ adalah koefisien-koefisien polinom, $n$ adalah derajat
-polinom.</p>
-</div>
-<div class="paragraph">
-<p>$GF(2^{n})$ memiliki $2^n$ elemen, setiap elemen direpresentasikan sebagai
+$n$ bit.</p></div><div class="paragraph"><p>Semua elemen dalam $GF(2^n)$ dinyatakan dalam bentuk polinom.</p></div><div class="paragraph"><p>Bentuk umum polinom berderajat n adalah:</p></div><div class="paragraph"><p>$$f(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{2}x^{2} + a_{1}x + a_{0}$</p></div><div class="paragraph"><p>$a_{n}, a_{n-1}, a_{0}$ adalah koefisien-koefisien polinom, $n$ adalah derajat
+polinom.</p></div><div class="paragraph"><p>$GF(2^{n})$ memiliki $2^n$ elemen, setiap elemen direpresentasikan sebagai
 polinom berderajat $n-1$ atau kurang, dengan koefisien-koefisiennya adalah
-elemen $\{0, 1\}$:</p>
-</div>
-<div class="paragraph">
-<p>$$GF(p^{n}) = \{a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \cdots + a_{1}x + a_{0} |
-a_{i} \in \{0, 1\}\}$</p>
-</div>
-<div class="paragraph">
-<p>Contohnya:
+elemen $\{0, 1\}$:</p></div><div class="paragraph"><p>$$GF(p^{n}) = \{a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \cdots + a_{1}x + a_{0} |
+a_{i} \in \{0, 1\}\}$</p></div><div class="paragraph"><p>Contohnya:
 $GF(2^{3}) = \{a_{2}x^{2} + a_{1}x^{1} + a_{0} | a_{i} \in \{0, 1\}\}$, memiliki
-derajat polinom $\geq 2$.</p>
-</div>
-<div class="paragraph">
-<p>Di dalam $GF(2^3)$, terdapat $2^{3} = 8$ polinom, yaitu:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>$0 \to 000$</p>
-</li>
-<li>
-<p>$1 \to 001$</p>
-</li>
-<li>
-<p>$x \to 010$</p>
-</li>
-<li>
-<p>$x+1 \to 011$</p>
-</li>
-<li>
-<p>$x^{2} \to 100$</p>
-</li>
-<li>
-<p>$x^{2}+1 \to 101$</p>
-</li>
-<li>
-<p>$x^{2}+x \to 110$</p>
-</li>
-<li>
-<p>$x^{2}+x+1 \to 111$</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Operasi penjumlahan dan perkalian dilakukan dengan menerapkan penjumlahan
-koefisien-koefisiennya dalam $\bmod \space  2$.</p>
-</div>
-<div class="paragraph">
-<p>Misalnya $a=(a_{n-1} \cdots a_{1}a_{0})$ dan $b=(b_{n-1} \cdots b_{1}b_{0})$,
-$a, b \n GF(2^n)$, maka:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>penjumlahan $a + b = c = (c_{n-1} \cdots c_{1}c_{0}), c_{i} = (a_{i} + b_{i})
-\bmod 2, c \in GF(2^n)$,</p>
-</li>
-<li>
-<p>perkalian $a \times b = c (c_{n-1} \cdots c_{1}c_{0})$ dimana $c$ adalah sisa
+derajat polinom $\geq 2$.</p></div><div class="paragraph"><p>Di dalam $GF(2^3)$, terdapat $2^{3} = 8$ polinom, yaitu:</p></div><div class="ulist"><ul><li><p>$0 \to 000$</p></li><li><p>$1 \to 001$</p></li><li><p>$x \to 010$</p></li><li><p>$x+1 \to 011$</p></li><li><p>$x^{2} \to 100$</p></li><li><p>$x^{2}+1 \to 101$</p></li><li><p>$x^{2}+x \to 110$</p></li><li><p>$x^{2}+x+1 \to 111$</p></li></ul></div><div class="paragraph"><p>Operasi penjumlahan dan perkalian dilakukan dengan menerapkan penjumlahan
+koefisien-koefisiennya dalam $\bmod \space 2$.</p></div><div class="paragraph"><p>Misalnya $a=(a_{n-1} \cdots a_{1}a_{0})$ dan $b=(b_{n-1} \cdots b_{1}b_{0})$,
+$a, b \n GF(2^n)$, maka:</p></div><div class="olist arabic"><ol class="arabic"><li><p>penjumlahan $a + b = c = (c_{n-1} \cdots c_{1}c_{0}), c_{i} = (a_{i} + b_{i})
+\bmod 2, c \in GF(2^n)$,</p></li><li><p>perkalian $a \times b = c (c_{n-1} \cdots c_{1}c_{0})$ dimana $c$ adalah sisa
 bagi dari polinom $a(x) \cdot b(x)$ dengan <em>irreducible polynomial</em> $f(x)$
-derajat $n$, $c \in GF(2^n)$.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Contoh: $a = x^3 + x^2 + 1$, $b = x^2 + x$, $a, b \in GF(2^4)$,</p>
-</div>
-<div class="paragraph">
-<p>$\begin{aligned}
-a+b &amp; = x^3 + x^2 + 1 + x^2 + x \bmod 2 \\
-    &amp; = x^3 + 2x^2 + x + 1 \bmod 2 \\
-    &amp; = x^3 + x + 1
-\end{aligned}$</p>
-</div>
-<div class="paragraph">
-<p>Operasi penjumlahan polinom $GF(p^2) \equiv$ operasi xor $(\oplus)$, misalnya:</p>
-</div>
-<div class="paragraph">
-<p>$\begin{aligned}
-a \oplus b &amp; = x^3 + x^2 + 1 + x^2 + x \bmod 2 \\
-           &amp; = 1101 \oplus 0110 \\
-           &amp; = 1011 \equiv x^3 + x + 1
-\end{aligned}$</p>
-</div>
-<div class="paragraph">
-<p>Operasi perkalian sama persis dengan perkalian baisa, kecuali menghasilkan
-polinom dengan derajat $\geq n - 1$,</p>
-</div>
-<div class="paragraph">
-<p>misalnya, $a = x^2 + x, b = x + 1, a, b \in GF(2^4)$,</p>
-</div>
-<div class="paragraph">
-<p>$\begin{aligned}
-a \cdot b &amp; = (x^2 + x)(x + 1) \bmod 2 \\
-        &amp; = (x^2 \cdot x) + (x^2 \cdot 1) + (x \cdot x) + (x \cdot 1) \bmod 2 \\
-        &amp; = x^3 + x^2 + + x^2 + x \bmod 2 \\
-        &amp; = x^3 + 2(x^2) + x \bmod 2 \\
-        &amp; = x^3 + x
-\end{aligned}$</p>
-</div>
-<div class="paragraph">
-<p>Jika menghasilkan polinom $\geq n - 1$, maka direduksi dengan membagi secara
+derajat $n$, $c \in GF(2^n)$.</p></li></ol></div><div class="paragraph"><p>Contoh: $a = x^3 + x^2 + 1$, $b = x^2 + x$, $a, b \in GF(2^4)$,</p></div><div class="paragraph"><p>$\begin{aligned}
+a+b & = x^3 + x^2 + 1 + x^2 + x \bmod 2 \\
+& = x^3 + 2x^2 + x + 1 \bmod 2 \\
+& = x^3 + x + 1
+\end{aligned}$</p></div><div class="paragraph"><p>Operasi penjumlahan polinom $GF(p^2) \equiv$ operasi xor $(\oplus)$, misalnya:</p></div><div class="paragraph"><p>$\begin{aligned}
+a \oplus b & = x^3 + x^2 + 1 + x^2 + x \bmod 2 \\
+& = 1101 \oplus 0110 \\
+& = 1011 \equiv x^3 + x + 1
+\end{aligned}$</p></div><div class="paragraph"><p>Operasi perkalian sama persis dengan perkalian baisa, kecuali menghasilkan
+polinom dengan derajat $\geq n - 1$,</p></div><div class="paragraph"><p>misalnya, $a = x^2 + x, b = x + 1, a, b \in GF(2^4)$,</p></div><div class="paragraph"><p>$\begin{aligned}
+a \cdot b & = (x^2 + x)(x + 1) \bmod 2 \\
+& = (x^2 \cdot x) + (x^2 \cdot 1) + (x \cdot x) + (x \cdot 1) \bmod 2 \\
+& = x^3 + x^2 + + x^2 + x \bmod 2 \\
+& = x^3 + 2(x^2) + x \bmod 2 \\
+& = x^3 + x
+\end{aligned}$</p></div><div class="paragraph"><p>Jika menghasilkan polinom $\geq n - 1$, maka direduksi dengan membagi secara
 modulo terhadap polinom <em>irreducible polynomial</em> $f(x)$ berderajat $n$.
 <em>Irreducible polynomial</em> adalah polinom yang tidak dihasilkan dari perkalian
 dua buah polinom lain (kecuali $1$ dan dirinya sendiri). Misalnya $x^2 + 1 \in
 GF(2^n)$, contoh lainnya $x^4 + x + 1$, tetapi $x^5 + x^2 + x + 1$ adalah
-polinom tereduksi karena $x^5 + x^2 + x + 1 = (x^5 + x^2 + 1)(x^2 + 1)$.</p>
-</div>
-<div class="paragraph">
-<p>Misalnya $a = 1011, b = 1001, a, b \in GF(2^4)$,</p>
-</div>
-<div class="paragraph">
-<p>$\begin{aligned}
-a \times b &amp; = (x^3 + x + 1) \times (x^3 + 1) \bmod 2 \\
-           &amp; = x^6 + x^4 + x + 1\\
-           &amp; = x^3 + x^2
-\end{aligned}$</p>
-</div>
-<div class="paragraph">
-<p>$x^3 + x^2$ dihasilkan dari membagi $x^6 + x^4 + x + 1$ dengan
-<em>irreducible polynomial</em> $f(x) = x^4 + x + 1$.</p>
-</div>
-<div class="paragraph">
-<p>$f(x)/g(x)$ memberikan hasil $g(x)$ (quotient) dam sisa $r(x)$ (remainder), yang
-memenuhi:</p>
-</div>
-<div class="paragraph">
-<p>$$f(x) = q(x)g(x) + r(x)$</p>
-</div>
-  <hr><footer>
-    <p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a
-            href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p>
-</footer>
-<script src="/assets/js/js.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+polinom tereduksi karena $x^5 + x^2 + x + 1 = (x^5 + x^2 + 1)(x^2 + 1)$.</p></div><div class="paragraph"><p>Misalnya $a = 1011, b = 1001, a, b \in GF(2^4)$,</p></div><div class="paragraph"><p>$\begin{aligned}
+a \times b & = (x^3 + x + 1) \times (x^3 + 1) \bmod 2 \\
+& = x^6 + x^4 + x + 1\\
+& = x^3 + x^2
+\end{aligned}$</p></div><div class="paragraph"><p>$x^3 + x^2$ dihasilkan dari membagi $x^6 + x^4 + x + 1$ dengan
+<em>irreducible polynomial</em> $f(x) = x^4 + x + 1$.</p></div><div class="paragraph"><p>$f(x)/g(x)$ memberikan hasil $g(x)$ (quotient) dam sisa $r(x)$ (remainder), yang
+memenuhi:</p></div><div class="paragraph"><p>$$f(x) = q(x)g(x) + r(x)$</p></div><hr><footer><p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p></footer><script src="/assets/js/js.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          delimiters: [
-              {left: '$$', right: '$', display: true},
-              {left: '$', right: '$', display: false},
-          ],
-          throwOnError : true,
-          trust: true
-        });
-    });
-</script></main>
-</body>
-</html>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!0,trust:!0})})</script></main></body></html>
