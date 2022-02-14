@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-14T12:43:12+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Deo Valiandro. M</title><subtitle>Hamba yang tidak berguna di tangan Allah yang penuh hikmat.</subtitle><entry><title type="html">Aritmatika Polinom di dalam Medan Galois $GF(2^n)$</title><link href="http://localhost:4000/2022/02/12/aritmatika-polinom-medan-galois.html" rel="alternate" type="text/html" title="Aritmatika Polinom di dalam Medan Galois $GF(2^n)$" /><published>2022-02-12T00:00:00+08:00</published><updated>2022-02-12T00:00:00+08:00</updated><id>http://localhost:4000/2022/02/12/aritmatika-polinom-medan-galois</id><content type="html" xml:base="http://localhost:4000/2022/02/12/aritmatika-polinom-medan-galois.html"><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://deo.or.id/feed.xml" rel="self" type="application/atom+xml" /><link href="https://deo.or.id/" rel="alternate" type="text/html" /><updated>2022-02-14T23:07:52+08:00</updated><id>https://deo.or.id/feed.xml</id><title type="html">Deo Valiandro. M</title><subtitle>Hamba yang tidak berguna di tangan Allah yang penuh hikmat.</subtitle><entry><title type="html">Aritmatika Polinom di dalam Medan Galois $GF(2^n)$</title><link href="https://deo.or.id/2022/02/12/aritmatika-polinom-medan-galois.html" rel="alternate" type="text/html" title="Aritmatika Polinom di dalam Medan Galois $GF(2^n)$" /><published>2022-02-12T00:00:00+08:00</published><updated>2022-02-12T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/12/aritmatika-polinom-medan-galois</id><content type="html" xml:base="https://deo.or.id/2022/02/12/aritmatika-polinom-medan-galois.html"><![CDATA[<div class="paragraph">
 <p>Galois Field (GF) yang banyak digunakan dalam kriptografi adalah $GF(2^n)$
 karena setiap baris text direpresentasikan sebagai barisan bit 0 dan 1 sepanjang
 $n$ bit.</p>
@@ -146,7 +146,7 @@ memenuhi:</p>
 </div>
 <div class="paragraph">
 <p>$$f(x) = q(x)g(x) + r(x)$</p>
-</div>]]></content><author><name></name></author><category term="Kriptografi" /></entry><entry><title type="html">Semigroup</title><link href="http://localhost:4000/2022/02/07/semigroup.html" rel="alternate" type="text/html" title="Semigroup" /><published>2022-02-07T00:00:00+08:00</published><updated>2022-02-07T00:00:00+08:00</updated><id>http://localhost:4000/2022/02/07/semigroup</id><content type="html" xml:base="http://localhost:4000/2022/02/07/semigroup.html"><![CDATA[<div class="paragraph">
+</div>]]></content><author><name></name></author><category term="Kriptografi" /></entry><entry><title type="html">Semigroup</title><link href="https://deo.or.id/2022/02/07/semigroup.html" rel="alternate" type="text/html" title="Semigroup" /><published>2022-02-07T00:00:00+08:00</published><updated>2022-02-07T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/07/semigroup</id><content type="html" xml:base="https://deo.or.id/2022/02/07/semigroup.html"><![CDATA[<div class="paragraph">
 <p>Sebuah set S yang mempunyai operasi binary $S \times S \to S$, dengan operasi
 $\cdot$ adalah semigroup jika memenuhi:</p>
 </div>
@@ -157,7 +157,7 @@ $\cdot$ adalah semigroup jika memenuhi:</p>
 (asosiatif).</p>
 </li>
 </ol>
-</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Monoid</title><link href="http://localhost:4000/2022/02/06/monoid.html" rel="alternate" type="text/html" title="Monoid" /><published>2022-02-06T00:00:00+08:00</published><updated>2022-02-06T00:00:00+08:00</updated><id>http://localhost:4000/2022/02/06/monoid</id><content type="html" xml:base="http://localhost:4000/2022/02/06/monoid.html"><![CDATA[<div class="paragraph">
+</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Monoid</title><link href="https://deo.or.id/2022/02/06/monoid.html" rel="alternate" type="text/html" title="Monoid" /><published>2022-02-06T00:00:00+08:00</published><updated>2022-02-06T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/06/monoid</id><content type="html" xml:base="https://deo.or.id/2022/02/06/monoid.html"><![CDATA[<div class="paragraph">
 <p>Sebuah set S yang mempunyai operasi binary $S \times S \to S$, dengan operasi
 $\cdot$ adalah monoid jika memenuhi:</p>
 </div>
@@ -175,7 +175,7 @@ $a \cdot e = a$ (element identitas).</p>
 </div>
 <div class="paragraph">
 <p>Denga artian, monoid adalah semigroup dengan tambahan identitas.</p>
-</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Pemrograman Fungsional</title><link href="http://localhost:4000/2022/02/05/fp.html" rel="alternate" type="text/html" title="Pemrograman Fungsional" /><published>2022-02-05T00:00:00+08:00</published><updated>2022-02-05T00:00:00+08:00</updated><id>http://localhost:4000/2022/02/05/fp</id><content type="html" xml:base="http://localhost:4000/2022/02/05/fp.html"><![CDATA[<div class="paragraph">
+</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Pemrograman Fungsional</title><link href="https://deo.or.id/2022/02/05/fp.html" rel="alternate" type="text/html" title="Pemrograman Fungsional" /><published>2022-02-05T00:00:00+08:00</published><updated>2022-02-05T00:00:00+08:00</updated><id>https://deo.or.id/2022/02/05/fp</id><content type="html" xml:base="https://deo.or.id/2022/02/05/fp.html"><![CDATA[<div class="paragraph">
 <p>Functional Programming (FP) merupakan konsep yang baru bagi saya. Ketika
 memasuki program studi Ilmu Komputer di Universitas Hasanuddin, saya hanya
 dikenalkan dengan pemrograman imperatif dengan Pascal kemudian melompat ke
@@ -250,7 +250,7 @@ konsep fp, namun saya masih kebingungan dengan berbagai jenis konsep fp.</p>
 </div>
 </div>
 </div>
-</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Selection Sort</title><link href="http://localhost:4000/2022/01/31/selection-sort.html" rel="alternate" type="text/html" title="Selection Sort" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/31/selection-sort</id><content type="html" xml:base="http://localhost:4000/2022/01/31/selection-sort.html"><![CDATA[<div class="listingblock">
+</div>]]></content><author><name></name></author><category term="fp" /></entry><entry><title type="html">Selection Sort</title><link href="https://deo.or.id/2022/01/31/selection-sort.html" rel="alternate" type="text/html" title="Selection Sort" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>https://deo.or.id/2022/01/31/selection-sort</id><content type="html" xml:base="https://deo.or.id/2022/01/31/selection-sort.html"><![CDATA[<div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="c"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
@@ -322,7 +322,7 @@ konsep fp, namun saya masih kebingungan dengan berbagai jenis konsep fp.</p>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre>
 </div>
-</div>]]></content><author><name></name></author><category term="Algoritma" /></entry><entry><title type="html">Persamaan KaTeX</title><link href="http://localhost:4000/2021/12/18/equation.html" rel="alternate" type="text/html" title="Persamaan KaTeX" /><published>2021-12-18T00:00:00+08:00</published><updated>2021-12-18T00:00:00+08:00</updated><id>http://localhost:4000/2021/12/18/equation</id><content type="html" xml:base="http://localhost:4000/2021/12/18/equation.html"><![CDATA[<div class="paragraph">
+</div>]]></content><author><name></name></author><category term="Algoritma" /></entry><entry><title type="html">Persamaan KaTeX</title><link href="https://deo.or.id/2021/12/18/equation.html" rel="alternate" type="text/html" title="Persamaan KaTeX" /><published>2021-12-18T00:00:00+08:00</published><updated>2021-12-18T00:00:00+08:00</updated><id>https://deo.or.id/2021/12/18/equation</id><content type="html" xml:base="https://deo.or.id/2021/12/18/equation.html"><![CDATA[<div class="paragraph">
 <p>Untuk menggunakan LaTeX align:</p>
 </div>
 <div class="listingblock">
@@ -399,7 +399,7 @@ a_2 &amp; = (X'X)^{-1} \\
     &amp; =(X'X)^{-1} \\
     &amp; =(X'X)^{-1}
 \end{aligned}$</p>
-</div>]]></content><author><name></name></author><category term="Tutorial" /></entry><entry><title type="html">Finite State Machine</title><link href="http://localhost:4000/2021/12/04/fsm.html" rel="alternate" type="text/html" title="Finite State Machine" /><published>2021-12-04T00:00:00+08:00</published><updated>2021-12-04T00:00:00+08:00</updated><id>http://localhost:4000/2021/12/04/fsm</id><content type="html" xml:base="http://localhost:4000/2021/12/04/fsm.html"><![CDATA[<div class="sect1">
+</div>]]></content><author><name></name></author><category term="Tutorial" /></entry><entry><title type="html">Finite State Machine</title><link href="https://deo.or.id/2021/12/04/fsm.html" rel="alternate" type="text/html" title="Finite State Machine" /><published>2021-12-04T00:00:00+08:00</published><updated>2021-12-04T00:00:00+08:00</updated><id>https://deo.or.id/2021/12/04/fsm</id><content type="html" xml:base="https://deo.or.id/2021/12/04/fsm.html"><![CDATA[<div class="sect1">
 <h2 id="finite-automata"><a class="anchor" href="#finite-automata"></a>Finite Automata</h2>
 <div class="sectionbody">
 <div class="quoteblock">
@@ -598,7 +598,7 @@ dan \$\delta\$ =<br>
 
 </div>
 </div>
-</div>]]></content><author><name></name></author><category term="Teori Komputasi" /></entry><entry><title type="html">ToC - intro</title><link href="http://localhost:4000/2021/12/03/intro-toc.html" rel="alternate" type="text/html" title="ToC - intro" /><published>2021-12-03T00:00:00+08:00</published><updated>2021-12-03T00:00:00+08:00</updated><id>http://localhost:4000/2021/12/03/intro-toc</id><content type="html" xml:base="http://localhost:4000/2021/12/03/intro-toc.html"><![CDATA[<div class="sect1">
+</div>]]></content><author><name></name></author><category term="Teori Komputasi" /></entry><entry><title type="html">ToC - intro</title><link href="https://deo.or.id/2021/12/03/intro-toc.html" rel="alternate" type="text/html" title="ToC - intro" /><published>2021-12-03T00:00:00+08:00</published><updated>2021-12-03T00:00:00+08:00</updated><id>https://deo.or.id/2021/12/03/intro-toc</id><content type="html" xml:base="https://deo.or.id/2021/12/03/intro-toc.html"><![CDATA[<div class="sect1">
 <h2 id="latar-belakang"><a class="anchor" href="#latar-belakang"></a>Latar belakang</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -664,7 +664,7 @@ adalah set semua string atas \$\Sigma\$ (<em>Kleene closure</em>), contohnya
 </ol>
 </div>
 </div>
-</div>]]></content><author><name></name></author><category term="Teori Komputasi" /></entry><entry><title type="html">Buble Sort</title><link href="http://localhost:4000/2021/11/11/buble-sort.html" rel="alternate" type="text/html" title="Buble Sort" /><published>2021-11-11T00:00:00+08:00</published><updated>2021-11-11T00:00:00+08:00</updated><id>http://localhost:4000/2021/11/11/buble-sort</id><content type="html" xml:base="http://localhost:4000/2021/11/11/buble-sort.html"><![CDATA[<div class="sect1">
+</div>]]></content><author><name></name></author><category term="Teori Komputasi" /></entry><entry><title type="html">Buble Sort</title><link href="https://deo.or.id/2021/11/11/buble-sort.html" rel="alternate" type="text/html" title="Buble Sort" /><published>2021-11-11T00:00:00+08:00</published><updated>2021-11-11T00:00:00+08:00</updated><id>https://deo.or.id/2021/11/11/buble-sort</id><content type="html" xml:base="https://deo.or.id/2021/11/11/buble-sort.html"><![CDATA[<div class="sect1">
 <h2 id="pendahuluan"><a class="anchor" href="#pendahuluan"></a>Pendahuluan</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -740,7 +740,7 @@ iterasi atau perulangan sebanyak n-1, dimana n adalah jumlah elemen.</p>
 </ol>
 </div>
 </div>
-</div>]]></content><author><name></name></author><category term="Algoritma" /></entry><entry><title type="html">Tata Krama Mahasiswa</title><link href="http://localhost:4000/2021/11/11/tata-krama-mahasiswa.html" rel="alternate" type="text/html" title="Tata Krama Mahasiswa" /><published>2021-11-11T00:00:00+08:00</published><updated>2021-11-11T00:00:00+08:00</updated><id>http://localhost:4000/2021/11/11/tata-krama-mahasiswa</id><content type="html" xml:base="http://localhost:4000/2021/11/11/tata-krama-mahasiswa.html"><![CDATA[<div class="imageblock">
+</div>]]></content><author><name></name></author><category term="Algoritma" /></entry><entry><title type="html">Tata Krama Mahasiswa</title><link href="https://deo.or.id/2021/11/11/tata-krama-mahasiswa.html" rel="alternate" type="text/html" title="Tata Krama Mahasiswa" /><published>2021-11-11T00:00:00+08:00</published><updated>2021-11-11T00:00:00+08:00</updated><id>https://deo.or.id/2021/11/11/tata-krama-mahasiswa</id><content type="html" xml:base="https://deo.or.id/2021/11/11/tata-krama-mahasiswa.html"><![CDATA[<div class="imageblock">
 <div class="content">
 <a class="image" href="/assets/img/tata-krama-mahasiswa.jpeg"><img src="/assets/img/tata-krama-mahasiswa.jpeg" alt="Tata krama mahasiswa"></a>
 </div>

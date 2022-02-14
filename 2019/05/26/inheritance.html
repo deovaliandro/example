@@ -1,20 +1,66 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat."><meta name="author" content="Deo Valiandro. M"><title>Inheritance</title><style>@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";@import "https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css";:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:initial}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style><link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"><script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous"></head><style>@media only screen and (max-width:600px){body{margin:5%}}</style><body><main><div class="navigation">[<a href="/" class="email">/home</a>]
-[<a href="/todo.html" class="email">/todo</a>]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat.">
+    <meta name="author" content="Deo Valiandro. M">
+    <title>Inheritance</title>
+    <style>:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:sans-serif;--mono:monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}html{font-size:14pt}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:transparent}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{margin:0;font-family:var(--mono)}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}#changeTheme{font-size:2em;vertical-align:middle}button{background-color:transparent;border:none}</style>
+    <link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+</head>
+<style>@media only screen and (max-width: 600px){body{margin: 5%}}</style>
+<body><main>
+    <div class="navigation">
+        [<a href="/" class="email">/home</a>][<a href="/todo.html" class="email">/todo</a>]
 [<a href="/link.html" class="email">/link</a>]
 [<a href="/pp.html" class="email">/pp</a>]
 [<a href="/pbo.html" class="email">/pbo</a>]
-[<a href="/sisfok.html" class="email">/sisfok-team</a>]
-[<a href="#" onclick="switchTheme()" class="email" id="changeTheme"></a>]</div><h1>Inheritance</h1><p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com></code></p><div class="paragraph"><p>Inheritance adalah pewarian sifat. Class yang berisafat umum akan mewariskan
+<button onclick="switchTheme();" class="email" id="changeTheme"></button> 🠔 Click</div>
+    <h1>Inheritance</h1>
+    
+    
+    
+    <p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com&gt;</code></p>
+    
+    <div class="paragraph">
+<p>Inheritance adalah pewarian sifat. Class yang berisafat umum akan mewariskan
 sifatnya ke class yang bersifat khusus. Misalnya class <code>Manusia</code> akan memiliki
-class turunan seperti <code>Ayah</code>, <code>Ibu</code> dan <code>Anak</code>.</p></div><div class="paragraph"><p>Ketika meng-extend sebuah class, maka semua member non-private termasuk variabel
-dan method akan diwariskan ke class tersebut.</p></div><div class="paragraph"><p>Class <code>Manusia</code> akan memiliki atribut dan method tersendiri, misalnya <code>nama</code>,
+class turunan seperti <code>Ayah</code>, <code>Ibu</code> dan <code>Anak</code>.</p>
+</div>
+<div class="paragraph">
+<p>Ketika meng-extend sebuah class, maka semua member non-private termasuk variabel
+dan method akan diwariskan ke class tersebut.</p>
+</div>
+<div class="paragraph">
+<p>Class <code>Manusia</code> akan memiliki atribut dan method tersendiri, misalnya <code>nama</code>,
 <code>jenisKelamin</code> dan <code>umur</code>. Class <code>Ayah</code> misalnya akan memiliki method dan
 atribut dari class <code>Manusia</code> namun akan memiliki sifat-sifat dan atribut yang
-khusus, seperti <code>suara</code>, <code>gayaBerjalan</code>, <code>warnaKulit</code>, dsb.</p></div><div class="paragraph"><p>Untuk mewariskan sifat, digunakan keyword <code>extend</code>, dan untuk memanggil atribut
+khusus, seperti <code>suara</code>, <code>gayaBerjalan</code>, <code>warnaKulit</code>, dsb.</p>
+</div>
+<div class="paragraph">
+<p>Untuk mewariskan sifat, digunakan keyword <code>extend</code>, dan untuk memanggil atribut
 dan method dari class induk, menggunakan keyword <code>super</code>. Keyword yang kedua
-adalah <code>implements</code> untuk inheritance/mewariskan dari sebuah interface.</p></div><div class="imageblock"><div class="content"><img src="https://static.studytonight.com/java/images/inheritance-in-java.jpg" alt="Inheritance"></div></div><div class="paragraph"><p>Keyword <code>super</code> dapat digunakan untuk memanggil property di class parent, bahkan
-bisa memanggil constructor class parent.</p></div><div class="paragraph"><p>Misalnya:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+adalah <code>implements</code> untuk inheritance/mewariskan dari sebuah interface.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://static.studytonight.com/java/images/inheritance-in-java.jpg" alt="Inheritance">
+</div>
+</div>
+<div class="paragraph">
+<p>Keyword <code>super</code> dapat digunakan untuk memanggil property di class parent, bahkan
+bisa memanggil constructor class parent.</p>
+</div>
+<div class="paragraph">
+<p>Misalnya:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
  3
  4
@@ -84,7 +130,15 @@ bisa memanggil constructor class parent.</p></div><div class="paragraph"><p>Misa
         <span class="k">this</span><span class="o">.</span><span class="na">umur</span> <span class="o">=</span> <span class="n">umur</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Class <code>Ayah</code> akan mewarisi sifat-sifat dari class <code>Manusia</code>.</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Class <code>Ayah</code> akan mewarisi sifat-sifat dari class <code>Manusia</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
  3
  4
@@ -120,11 +174,64 @@ bisa memanggil constructor class parent.</p></div><div class="paragraph"><p>Misa
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Ayah berjalan"</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Keuntungan dari inheritance adalah:</p></div><div class="olist arabic"><ol class="arabic"><li><p>Reusability dari code, kita tidak perlu menulis kode berulang-ulang.</p></li><li><p>Mendukung polimorphisme dengan adanya method overriding (dibahas pada bab
-polimorphisme)</p></li></ol></div><div class="paragraph"><p>Sedangkan kerugiannya adalah class parent dan child akan memiliki kesamaan
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Keuntungan dari inheritance adalah:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Reusability dari code, kita tidak perlu menulis kode berulang-ulang.</p>
+</li>
+<li>
+<p>Mendukung polimorphisme dengan adanya method overriding (dibahas pada bab
+polimorphisme)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Sedangkan kerugiannya adalah class parent dan child akan memiliki kesamaan
 identik, sehingga apabila terjadi perubahan di class parent, maka akan otomatis
-mengubah juga class child. Hal ini membuat adanya saling ketergantungan.</p></div><div class="sect1"><h2 id="jenis-inheritance"><a class="anchor" href="#jenis-inheritance"></a>Jenis Inheritance</h2><div class="sectionbody"><div class="paragraph"><p>Java hanya mendukung 3 jenis inheritance berikut:</p></div><div class="olist arabic"><ol class="arabic"><li><p>Single inheritance</p></li><li><p>Multilevel inheritance</p></li><li><p>Heirarchical inheritance</p></li></ol></div><div class="paragraph"><p>Java tidak mendukung multiple inheritance dengan alasan keamanan dari masalah
-<code>Deadly Diamond of Death</code>.</p></div><div class="imageblock"><div class="content"><img src="https://static.studytonight.com/java/images/types-of-inheritance.png" alt="Types of Inheritance"></div></div><div class="sect2"><h3 id="single-inheritance"><a class="anchor" href="#single-inheritance"></a>Single inheritance</h3><div class="paragraph"><p>Ini misalnya ketika ada pewarisan suatu class ke class lain, misalnya:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+mengubah juga class child. Hal ini membuat adanya saling ketergantungan.</p>
+</div>
+<div class="sect1">
+<h2 id="jenis-inheritance"><a class="anchor" href="#jenis-inheritance"></a>Jenis Inheritance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Java hanya mendukung 3 jenis inheritance berikut:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Single inheritance</p>
+</li>
+<li>
+<p>Multilevel inheritance</p>
+</li>
+<li>
+<p>Heirarchical inheritance</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Java tidak mendukung multiple inheritance dengan alasan keamanan dari masalah
+<code>Deadly Diamond of Death</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://static.studytonight.com/java/images/types-of-inheritance.png" alt="Types of Inheritance">
+</div>
+</div>
+<div class="sect2">
+<h3 id="single-inheritance"><a class="anchor" href="#single-inheritance"></a>Single inheritance</h3>
+<div class="paragraph">
+<p>Ini misalnya ketika ada pewarisan suatu class ke class lain, misalnya:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
  3
  4
@@ -152,8 +259,19 @@ mengubah juga class child. Hal ini membuat adanya saling ketergantungan.</p></di
         <span class="n">b</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div></div><div class="sect2"><h3 id="multilevel-inheritance"><a class="anchor" href="#multilevel-inheritance"></a>Multilevel Inheritance</h3><div class="paragraph"><p>Ini misalnya pada sebuah class C extends class B, lalu class B extends class A.
-Misalnya:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="multilevel-inheritance"><a class="anchor" href="#multilevel-inheritance"></a>Multilevel Inheritance</h3>
+<div class="paragraph">
+<p>Ini misalnya pada sebuah class C extends class B, lalu class B extends class A.
+Misalnya:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
  3
  4
@@ -197,8 +315,19 @@ Misalnya:</p></div><div class="listingblock"><div class="content"><pre class="ro
         <span class="n">c</span><span class="o">.</span><span class="na">showB</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div></div><div class="sect2"><h3 id="hierarchical-inheritance"><a class="anchor" href="#hierarchical-inheritance"></a>Hierarchical Inheritance</h3><div class="paragraph"><p>Ini terjadi jika ada dua class memiliki satu parent class yang sama. Misalnya
-class B dan class C extends class A. Contohnya:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="hierarchical-inheritance"><a class="anchor" href="#hierarchical-inheritance"></a>Hierarchical Inheritance</h3>
+<div class="paragraph">
+<p>Ini terjadi jika ada dua class memiliki satu parent class yang sama. Misalnya
+class B dan class C extends class A. Contohnya:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
  3
  4
@@ -242,12 +371,56 @@ class B dan class C extends class A. Contohnya:</p></div><div class="listingbloc
         <span class="n">b</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div></div><div class="sect2"><h3 id="multiple-inheritance-tidak-didukung-java"><a class="anchor" href="#multiple-inheritance-tidak-didukung-java"></a>Multiple Inheritance [tidak didukung Java]</h3><div class="paragraph"><p>Multiple inheritance adalah inheritance sebuah class, misalnya class C yang
-mempunyai 2 buah parent, misalnya class B dan class A.</p></div><div class="paragraph"><p>Mengapa multiple inheritance tidak didukung, karena:</p></div><div class="olist arabic"><ol class="arabic"><li><p>Untuk menghilangkan ambiguitas,</p></li><li><p>Untuk mempermudah review code dan clear design.</p></li></ol></div><div class="imageblock"><div class="content"><img src="https://static.studytonight.com/java/images/multiple-inheritance-problem.jpg" alt="Multiple Inheritance"></div></div></div></div></div><div class="sect1"><h2 id="overriding-method"><a class="anchor" href="#overriding-method"></a>Overriding Method</h2><div class="sectionbody"><div class="paragraph"><p>Dalam Java, sebuah method yang sama antara <code>superclass</code> dan <code>subclass</code>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="multiple-inheritance-tidak-didukung-java"><a class="anchor" href="#multiple-inheritance-tidak-didukung-java"></a>Multiple Inheritance [tidak didukung Java]</h3>
+<div class="paragraph">
+<p>Multiple inheritance adalah inheritance sebuah class, misalnya class C yang
+mempunyai 2 buah parent, misalnya class B dan class A.</p>
+</div>
+<div class="paragraph">
+<p>Mengapa multiple inheritance tidak didukung, karena:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Untuk menghilangkan ambiguitas,</p>
+</li>
+<li>
+<p>Untuk mempermudah review code dan clear design.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://static.studytonight.com/java/images/multiple-inheritance-problem.jpg" alt="Multiple Inheritance">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overriding-method"><a class="anchor" href="#overriding-method"></a>Overriding Method</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dalam Java, sebuah method yang sama antara <code>superclass</code> dan <code>subclass</code>
 dibolehkan. Ketika sebuah method dengan nama yang sama dengan method yang ada
 pada <code>superclass</code> dibuat pada <code>subclass</code>, maka method yang ada di <code>superclass</code>
-ditimpa (<code>override</code>) dengan method yang baru.</p></div><div class="paragraph"><p>Sehingga, ketika method tersebut dipanggil pada <code>subclass</code>, maka yang akan
-dieksekusi adalah method yang ada pada <code>subclass</code>.</p></div><div class="paragraph"><p>Contohnya:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+ditimpa (<code>override</code>) dengan method yang baru.</p>
+</div>
+<div class="paragraph">
+<p>Sehingga, ketika method tersebut dipanggil pada <code>subclass</code>, maka yang akan
+dieksekusi adalah method yang ada pada <code>subclass</code>.</p>
+</div>
+<div class="paragraph">
+<p>Contohnya:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
  3
  4
@@ -321,10 +494,29 @@ dieksekusi adalah method yang ada pada <code>subclass</code>.</p></div><div clas
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"My ages is "</span> <span class="o">+</span> <span class="n">deo</span><span class="o">.</span><span class="na">myAge</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Dimana terlihat, bahwa terdapat dua method yang sama, yang pertama method
-<code>myAge</code> di <code>superclass</code> dan method <code>myAge</code> yang kedua di <code>subclass</code>.</p></div><div class="paragraph"><p>Walaupun sudah panggil dengan menggunakan <code>super.myAge()</code>, namun ketika di
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dimana terlihat, bahwa terdapat dua method yang sama, yang pertama method
+<code>myAge</code> di <code>superclass</code> dan method <code>myAge</code> yang kedua di <code>subclass</code>.</p>
+</div>
+<div class="paragraph">
+<p>Walaupun sudah panggil dengan menggunakan <code>super.myAge()</code>, namun ketika di
 eksekusi, hasil yang keluar adalah method yang terdapat pada <code>subclass</code>, yang
-artinya sudah ditimpa/overriding.</p></div></div></div><hr><footer><p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p></footer><script src="/assets/js/js.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+artinya sudah ditimpa/overriding.</p>
+</div>
+</div>
+</div>
+    <hr><footer>
+    <a href="https://github.com/deovaliandro/deovaliandro.github.io/edit/main/_posts/oop/2019-05-26-inheritance.adoc"><p><i class="fa-solid fa-pen-to-square"></i> Edit</p></a>
+    <p>&copy; 2016 - 2022 Dibuat dengan ❤️, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p>
+</footer>
+<script src="/assets/js/js.js"></script>
+<script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!0,trust:!0})})</script></main></body></html>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$',display:true},{left:'$',right:'$',display:false}],throwOnError:true,trust:true});});</script></main>
+</body>
+
+</html>

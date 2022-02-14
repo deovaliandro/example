@@ -1,63 +1,297 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat."><meta name="author" content="Deo Valiandro. M"><title>ELGamal</title><style>@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";@import "https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css";:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:initial}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style><link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"><script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous"></head><style>@media only screen and (max-width:600px){body{margin:5%}}</style><body><main><div class="navigation">[<a href="/" class="email">/home</a>]
-[<a href="/todo.html" class="email">/todo</a>]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat.">
+    <meta name="author" content="Deo Valiandro. M">
+    <title>ELGamal</title>
+    <style>:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:sans-serif;--mono:monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}html{font-size:14pt}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:transparent}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{margin:0;font-family:var(--mono)}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}#changeTheme{font-size:2em;vertical-align:middle}button{background-color:transparent;border:none}</style>
+    <link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+</head>
+<style>@media only screen and (max-width: 600px){body{margin: 5%}}</style>
+<body><main>
+    <div class="navigation">
+        [<a href="/" class="email">/home</a>][<a href="/todo.html" class="email">/todo</a>]
 [<a href="/link.html" class="email">/link</a>]
 [<a href="/pp.html" class="email">/pp</a>]
 [<a href="/pbo.html" class="email">/pbo</a>]
-[<a href="/sisfok.html" class="email">/sisfok-team</a>]
-[<a href="#" onclick="switchTheme()" class="email" id="changeTheme"></a>]</div><h1>ELGamal</h1><p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com></code></p><div class="sect1"><h2 id="pendahuluan"><a class="anchor" href="#pendahuluan"></a>Pendahuluan</h2><div class="sectionbody"><div class="paragraph"><p>ElGamal dibuat oleh Taher Elgamal pada tahun 1985. Keamanan ElGamal terletak
+<button onclick="switchTheme();" class="email" id="changeTheme"></button> 🠔 Click</div>
+    <h1>ELGamal</h1>
+    
+    
+    
+    <p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com&gt;</code></p>
+    
+    <div class="sect1">
+<h2 id="pendahuluan"><a class="anchor" href="#pendahuluan"></a>Pendahuluan</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ElGamal dibuat oleh Taher Elgamal pada tahun 1985. Keamanan ElGamal terletak
 pada persoalan logaritma diskrit, yaitu $p \in \mathbb{P}, \{g, y\} \in
 \mathbb{Z}, \exists x | g^{x} \equiv y (\bmod p)$. Menemukan nilai $x$ akan
-sangat susah.</p></div></div></div><div class="sect1"><h2 id="variabel"><a class="anchor" href="#variabel"></a>Variabel</h2><div class="sectionbody"><div class="olist arabic"><ol class="arabic"><li><p>$p \in \mathbb{P}$ (tidak rahasia),</p></li><li><p>$g \in \mathbb{Z}$, $g$ adalah akar primitif dari $p$ (tidak rahasia),</p></li><li><p>$x$, bilangan acak (rahasia),</p></li><li><p>$y = g^x \bmod p$ (tidak rahasia, kunci publik),</p></li><li><p>$m$, plaintext (rahasia),</p></li><li><p>$a, b$, ciphertext (tidak rahasia).</p></li></ol></div></div></div><div class="sect1"><h2 id="fungsi-enkripsi-dan-dekripsi"><a class="anchor" href="#fungsi-enkripsi-dan-dekripsi"></a>Fungsi Enkripsi dan Dekripsi</h2><div class="sectionbody"><div class="paragraph"><p>Fungsi enkripsi dinyatakan dengan:</p></div><div class="paragraph"><p>$$a = g^x \bmod p$</p></div><div class="paragraph"><p>$$b = y^k m \bmod p$</p></div><div class="paragraph"><p>Pasangan $a, b$ adalah ciphertext yang berukuran $2 \times m$.</p></div><div class="paragraph"><p>Fungsi dekripsi dinyatakan dengan:</p></div><div class="paragraph"><p>$$\begin{aligned}
-m & = (b/a^{x}) \bmod p\\
-& = b(a^{x} )^{-1} \bmod p
-\end{aligned}$</p></div><div class="paragraph"><p>Dengan: $(a^{x} )^{-1} = a^{p-1-x} \bmod p$ (invers modulo).</p></div></div></div><div class="sect1"><h2 id="skenario"><a class="anchor" href="#skenario"></a>Skenario</h2><div class="sectionbody"><div class="paragraph"><p>Bagian ini menjelaskan skenario bagaimana kriptografi kunci publik bekerja.
-Kita akan menggunakan partisipan klasik Alice dan Bob sebagai dua pihak yang
-melakukan pertukaran informasi.</p></div><div class="olist arabic"><ol class="arabic"><li><p>Alice dan Bob setuju untuk menggunakan public-key cryptosystem.</p></li><li><p>Bob mengirimkan public key-nya kepada Alice.</p></li><li><p>Alice meng-encrypt pesan yang dibuatkan dengan menggunakan public key milik
-Bob dan mengirimkan pesan yang sudah di-encrypt kepada Bob.</p></li><li><p>Bob men-decrypt pesan dari Alice menggunakan private key miliknya.</p></li></ol></div></div></div><div class="sect1"><h2 id="pembangkitan-kunci"><a class="anchor" href="#pembangkitan-kunci"></a>Pembangkitan Kunci</h2><div class="sectionbody"><div class="paragraph"><p>Alice dan Bob menyepakati $p \in \mathbb{P}, a \in \mathbb{Z}$, kemudian:</p></div><div class="olist arabic"><ol class="arabic"><li><p>Alice memilih $x, x &lt; x &lt; p-1$ (acak),</p></li><li><p>Alice menghitung $y = g^x \bmod p$.</p></li></ol></div><div class="paragraph"><p>Mengasilkan kunci publik: $(y, g, p)$ dan kunci private $(x)$.</p></div><div class="paragraph"><p>Misalhnya:</p></div><div class="paragraph"><p>$p = 2273$, $g = 3, x = 243$, Alice kemudian menghitung:</p></div><div class="paragraph"><p>$y = g^x \bmod p = 3^{243} \bmod 2273 = 461$</p></div><div class="paragraph"><p>Menghasilkan kunci publik $(461, 3, 2273)$ dan kunci privat $(243)$.</p></div></div></div><div class="sect1"><h2 id="contoh"><a class="anchor" href="#contoh"></a>Contoh</h2><div class="sectionbody"><div class="paragraph"><p>Pesan $m, 0 > m &lt; p-1$, dapat dibagi kedalam blok $m_1, m_2, \cdots$, sehingga
-$m &lt; p-1$.</p></div><div class="paragraph"><p>Misalnya $m = 07001114$, $m_1 = 0700, m_2 = 1114, \forall m_i &lt; 2273 - 1$.</p></div><div class="sect2"><h3 id="enkripsi-pesan"><a class="anchor" href="#enkripsi-pesan"></a>Enkripsi Pesan</h3><div class="paragraph"><p>Untuk enkripsi blok $m_1$, dipilih $k = 1463 \in [0, 2273-1]$.</p></div><div class="paragraph"><p>$\begin{aligned}
-m_1 & = 0700 \\
-a & = g^k \bmod p \\
-& = 3^{1463} \bmod 2273 \\
-& = 1439 \\
-b & = y^k m_1 \bmod p \\
-& = 461^{1463} \cdot 700 \bmod 2273 \\
-& = 74
-\end{aligned}$</p></div><div class="paragraph"><p>Cihpertext untuk $c_1 = (1439, 74)$.</p></div><div class="paragraph"><p>Untuk enkripsi blok $m_2$, dipilih $k = 2001 \in [0, 2273-1]$.</p></div><div class="paragraph"><p>$\begin{aligned}
-m_1 & = 1114 \\
-a & = g^k \bmod p \\
-& = 3^{20001} \bmod 2273 \\
-& = 1220 \\
-b & = y^k m_1 \bmod p \\
-& = 461^{20001} \cdot 1114 \bmod 2273 \\
-& = 1682
-\end{aligned}$</p></div><div class="paragraph"><p>Cihpertext untuk $c_1 = (1220, 1682)$.</p></div></div><div class="sect2"><h3 id="dekripsi-pesan"><a class="anchor" href="#dekripsi-pesan"></a>Dekripsi Pesan</h3><div class="paragraph"><p>Untuk mendekripsi blok $c_1$,</p></div><div class="paragraph"><p>$\begin{aligned}
-c_1 & = (1439, 74) \\
-(a^{x} )^{-1} & = a^{p-1-x} \bmod p \\
-& = 1439^{2029} \bmod 2273 \\
-& = 1791 \\
-m_1 & = b/a^{x} \bmod p \\
-& = b(a^{x} )^{-1} \bmod p \\
-& = 74 \cdot 1791 \bmod 2273 \\
-& = 700 \\
-& = 0700
-\end{aligned}$</p></div><div class="paragraph"><p>Untuk mendekripsi blok $c_2$,</p></div><div class="paragraph"><p>$\begin{aligned}
-c_2 & = (1220, 1682) \\
-(a^{x} )^{-1} & = a^{p-1-x} \bmod p \\
-& = 1220^{2029} \bmod 2273 \\
-& = 1125 \\
-m_2 & = b/a^{x} \bmod p \\
-& = b(a^{x} )^{-1} \bmod p \\
-& = 1682 \cdot 1125 \bmod 2273 \\
-& = 1114
-\end{aligned}$</p></div><div class="paragraph"><p>Pesan berhasil di dekripsi kemabali, yaitu $07001114$.</p></div></div></div></div><div class="sect1"><h2 id="penutup"><a class="anchor" href="#penutup"></a>Penutup</h2><div class="sectionbody"><div class="paragraph"><p>ElGamal pada awalnya diciptakan untuk <em>digital signature</em> yang kemudian
+sangat susah.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="variabel"><a class="anchor" href="#variabel"></a>Variabel</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>$p \in \mathbb{P}$ (tidak rahasia),</p>
+</li>
+<li>
+<p>$g \in \mathbb{Z}$, $g$ adalah akar primitif dari $p$ (tidak rahasia),</p>
+</li>
+<li>
+<p>$x$, bilangan acak (rahasia),</p>
+</li>
+<li>
+<p>$y = g^x \bmod p$ (tidak rahasia, kunci publik),</p>
+</li>
+<li>
+<p>$m$, plaintext (rahasia),</p>
+</li>
+<li>
+<p>$a, b$, ciphertext (tidak rahasia).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fungsi-enkripsi-dan-dekripsi"><a class="anchor" href="#fungsi-enkripsi-dan-dekripsi"></a>Fungsi Enkripsi dan Dekripsi</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Fungsi enkripsi dinyatakan dengan:</p>
+</div>
+<div class="paragraph">
+<p>$$a = g^x \bmod p$</p>
+</div>
+<div class="paragraph">
+<p>$$b = y^k m \bmod p$</p>
+</div>
+<div class="paragraph">
+<p>Pasangan $a, b$ adalah ciphertext yang berukuran $2 \times m$.</p>
+</div>
+<div class="paragraph">
+<p>Fungsi dekripsi dinyatakan dengan:</p>
+</div>
+<div class="paragraph">
+<p>$$\begin{aligned}
+m &amp; = (b/a^{x}) \bmod p\\
+  &amp; = b(a^{x} )^{-1} \bmod p
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Dengan: $(a^{x} )^{-1} = a^{p-1-x} \bmod p$ (invers modulo).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="skenario"><a class="anchor" href="#skenario"></a>Skenario</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bagian ini menjelaskan skenario bagaimana kriptografi kunci publik bekerja.
+Kita akan menggunakan partisipan klasik Alice dan Bob sebagai dua pihak  yang
+melakukan pertukaran informasi.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Alice dan Bob setuju untuk menggunakan public-key cryptosystem.</p>
+</li>
+<li>
+<p>Bob mengirimkan public key-nya kepada Alice.</p>
+</li>
+<li>
+<p>Alice meng-encrypt pesan yang dibuatkan dengan menggunakan public key milik
+Bob dan mengirimkan pesan yang sudah di-encrypt kepada Bob.</p>
+</li>
+<li>
+<p>Bob men-decrypt pesan dari Alice menggunakan private key miliknya.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pembangkitan-kunci"><a class="anchor" href="#pembangkitan-kunci"></a>Pembangkitan Kunci</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Alice dan Bob menyepakati $p \in \mathbb{P}, a \in \mathbb{Z}$, kemudian:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Alice memilih $x, x &lt; x &lt; p-1$ (acak),</p>
+</li>
+<li>
+<p>Alice menghitung $y = g^x \bmod p$.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Mengasilkan kunci publik: $(y, g, p)$ dan kunci private $(x)$.</p>
+</div>
+<div class="paragraph">
+<p>Misalhnya:</p>
+</div>
+<div class="paragraph">
+<p>$p = 2273$, $g = 3, x = 243$, Alice kemudian menghitung:</p>
+</div>
+<div class="paragraph">
+<p>$y = g^x \bmod p = 3^{243} \bmod 2273 = 461$</p>
+</div>
+<div class="paragraph">
+<p>Menghasilkan kunci publik $(461, 3, 2273)$ dan kunci privat $(243)$.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contoh"><a class="anchor" href="#contoh"></a>Contoh</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pesan $m, 0 &gt; m &lt; p-1$, dapat dibagi kedalam blok $m_1, m_2, \cdots$, sehingga
+$m &lt; p-1$.</p>
+</div>
+<div class="paragraph">
+<p>Misalnya $m = 07001114$, $m_1 = 0700, m_2 = 1114, \forall m_i &lt; 2273 - 1$.</p>
+</div>
+<div class="sect2">
+<h3 id="enkripsi-pesan"><a class="anchor" href="#enkripsi-pesan"></a>Enkripsi Pesan</h3>
+<div class="paragraph">
+<p>Untuk enkripsi blok $m_1$, dipilih $k = 1463 \in [0, 2273-1]$.</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+m_1 &amp; = 0700 \\
+a   &amp; = g^k \bmod p \\
+    &amp; = 3^{1463} \bmod 2273 \\
+    &amp; = 1439 \\
+b   &amp; = y^k m_1 \bmod p \\
+    &amp; = 461^{1463} \cdot 700 \bmod 2273 \\
+    &amp; = 74
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Cihpertext untuk $c_1 = (1439, 74)$.</p>
+</div>
+<div class="paragraph">
+<p>Untuk enkripsi blok $m_2$, dipilih $k = 2001 \in [0, 2273-1]$.</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+m_1 &amp; = 1114 \\
+a   &amp; = g^k \bmod p \\
+    &amp; = 3^{20001} \bmod 2273 \\
+    &amp; = 1220 \\
+b   &amp; = y^k m_1 \bmod p \\
+    &amp; = 461^{20001} \cdot 1114 \bmod 2273 \\
+    &amp; = 1682
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Cihpertext untuk $c_1 = (1220, 1682)$.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dekripsi-pesan"><a class="anchor" href="#dekripsi-pesan"></a>Dekripsi Pesan</h3>
+<div class="paragraph">
+<p>Untuk mendekripsi blok $c_1$,</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+c_1 &amp; = (1439, 74) \\
+(a^{x} )^{-1} &amp; = a^{p-1-x} \bmod p \\
+    &amp; = 1439^{2029} \bmod 2273 \\
+    &amp; = 1791 \\
+m_1 &amp; = b/a^{x} \bmod p \\
+    &amp; = b(a^{x} )^{-1} \bmod p \\
+    &amp; = 74 \cdot 1791 \bmod 2273 \\
+    &amp; = 700 \\
+    &amp; = 0700
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Untuk mendekripsi blok $c_2$,</p>
+</div>
+<div class="paragraph">
+<p>$\begin{aligned}
+c_2 &amp; = (1220, 1682) \\
+(a^{x} )^{-1} &amp; = a^{p-1-x} \bmod p \\
+    &amp; = 1220^{2029} \bmod 2273 \\
+    &amp; = 1125 \\
+m_2 &amp; = b/a^{x} \bmod p \\
+    &amp; = b(a^{x} )^{-1} \bmod p \\
+    &amp; = 1682 \cdot 1125 \bmod 2273 \\
+    &amp; = 1114
+\end{aligned}$</p>
+</div>
+<div class="paragraph">
+<p>Pesan berhasil di dekripsi kemabali, yaitu $07001114$.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="penutup"><a class="anchor" href="#penutup"></a>Penutup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ElGamal pada awalnya diciptakan untuk <em>digital signature</em> yang kemudian
 dimodifikasi untuk digunakan untuk enkripsi dan dekripsi. Kekuatan ElGamal
-terletak pada sukarnya menghitung logaritma diskrit.</p></div><div class="paragraph"><p>ElGamal seperti algoritma asimetrik lainnya, digunakan untuk enkripsi dan
-dekripsi kunci algoritma simetrik.</p></div></div></div><div class="sect1"><h2 id="reference"><a class="anchor" href="#reference"></a>Reference</h2><div class="sectionbody"><div class="olist arabic"><ol class="arabic"><li><p>ElGamal. T. "A Public-Key Cryptosystem and a Signature Scheme Based on
-Discrete Logarithms". IEEE Transactions on Information Theory. 1985</p></li><li><p>Munir. R. "Kriptografi Edisi Kedua". Informatika: Bandung. 2019.</p></li><li><p>Schneier, B. Applied Cryptography, 2nd Ed. John Wiley & Sons, Inc:
-Canada, 1996.</p></li></ol></div></div></div><div class="sect1"><h2 id="lampiran"><a class="anchor" href="#lampiran"></a>Lampiran</h2><div class="sectionbody"><div class="paragraph"><p>Penggunaan:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="bash"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+terletak pada sukarnya menghitung logaritma diskrit.</p>
+</div>
+<div class="paragraph">
+<p>ElGamal seperti algoritma asimetrik lainnya, digunakan untuk enkripsi dan
+dekripsi kunci algoritma simetrik.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="reference"><a class="anchor" href="#reference"></a>Reference</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ElGamal. T. "A Public-Key Cryptosystem and a Signature Scheme Based on
+Discrete Logarithms". IEEE Transactions on Information Theory. 1985</p>
+</li>
+<li>
+<p>Munir. R. "Kriptografi Edisi Kedua". Informatika: Bandung. 2019.</p>
+</li>
+<li>
+<p>Schneier, B. Applied Cryptography, 2nd Ed. John Wiley &amp; Sons, Inc:
+Canada, 1996.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="lampiran"><a class="anchor" href="#lampiran"></a>Lampiran</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Penggunaan:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre>python elgamal.py
-</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Code:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="python"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
  2
  3
  4
@@ -189,7 +423,20 @@ Canada, 1996.</p></li></ol></div></div></div><div class="sect1"><h2 id="lampiran
 <span class="n">key_builder</span><span class="p">()</span>
 <span class="n">encryption</span><span class="p">()</span>
 <span class="n">decryption</span><span class="p">()</span>
-</pre></td></tr></tbody></table></code></pre></div></div></div></div><hr><footer><p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p></footer><script src="/assets/js/js.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+</div>
+</div>
+    <hr><footer>
+    <a href="https://github.com/deovaliandro/deovaliandro.github.io/edit/main/_posts/cryptography/2019-11-20-elgamal.adoc"><p><i class="fa-solid fa-pen-to-square"></i> Edit</p></a>
+    <p>&copy; 2016 - 2022 Dibuat dengan ❤️, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p>
+</footer>
+<script src="/assets/js/js.js"></script>
+<script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!0,trust:!0})})</script></main></body></html>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$',display:true},{left:'$',right:'$',display:false}],throwOnError:true,trust:true});});</script></main>
+</body>
+
+</html>

@@ -1,31 +1,102 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat."><meta name="author" content="Deo Valiandro. M"><title>Class dan Object</title><style>@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";@import "https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css";:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:'Open Sans',sans-serif;--mono:'Fira Code',monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}@media(min-width:480px){html{font-size:14pt}}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:initial}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{font-family:var(--mono);margin:0}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}</style><link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"><script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous"></head><style>@media only screen and (max-width:600px){body{margin:5%}}</style><body><main><div class="navigation">[<a href="/" class="email">/home</a>]
-[<a href="/todo.html" class="email">/todo</a>]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hamba yang tidak berguna di tangan Allah yang penuh hikmat.">
+    <meta name="author" content="Deo Valiandro. M">
+    <title>Class dan Object</title>
+    <style>:root{--bg:#fff;--hr:#eee;--font-color:#4B4B4B;--blockquote:#f9f9f9;--meta:#828282;--link:#54008c;--font:sans-serif;--mono:monospace}[data-theme=dark]{--bg:#282828;--hr:#d79921;--font-color:#ebdbb2;--blockquote:#504945;--meta:#d5c4a1;--link:#d79921}html{font-size:14pt}body{font-family:var(--font);color:var(--font-color);background-color:var(--bg);max-width:35rem;margin:auto;word-break:break-word}.katex{font-size:1.1em!important}h1{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:16px;margin-top:2rem}h2{font-size:1.8rem;font-weight:700}h3{font-size:1.5rem;font-weight:700}p{line-height:1.5rem}a{color:var(--link);text-decoration:none;background-color:transparent}a.bare{word-break:break-all}footer{text-align:center;font-size:.8em;padding:1em}blockquote{background:var(--blockquote);border-left:5px solid var(--hr);padding:1em;margin-left:0}ol.dash{list-style:none;margin-left:0;padding-left:1em}ol.dash>li:before{display:inline-block;content:"-";width:1em;margin-left:-1em}table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:0 0}table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}table.linenotable td.code{padding-left:.75em}table:not(.linenotable){margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}table:not(.linenotable) thead th{border-bottom:1px solid #ddd}td,th{padding:5px}tfoot,thead,tr:nth-child(even){background:#eee}ul.checklist{list-style-type:none}code,pre{font-family:var(--mono);line-height:1.5em;overflow-x:auto;font-variant-ligatures:normal;font-size:16px}p>code{white-space:nowrap}.tableblock{margin:0}a:hover{text-decoration:underline}img,video{display:block;margin-left:auto;margin-right:auto;border-radius:5px;max-width:100%;max-height:80vh}video{margin-bottom:1rem}hr{position:relative;border:0;border-top:2px solid var(--hr);border-bottom:1px solid var(--bg)}.meta{color:var(--meta);font-family:var(--font);font-weight:400}.center{text-align:center;overflow-x:auto}.navigation{margin-top:.8em}.medsos>a:hover{text-decoration:none}.icon{fill:var(--font-color);width:37px;height:37px;margin-right:1em;margin-top:1em;display:inline-block}.me{font-size:3rem;font-weight:700;text-align:left;margin-top:2.5rem}.email{margin:0;font-family:var(--mono)}.sub{margin:0}.back{font-size:1em}li>p{margin:0}.checklist{padding-left:.5em}ol.post li{display:flex}ol.post li span{flex:0 0 95px}#changeTheme{font-size:2em;vertical-align:middle}button{background-color:transparent;border:none}</style>
+    <link link id="stylesheet" rel="stylesheet" type="text/css" href="/assets/css/github.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+</head>
+<style>@media only screen and (max-width: 600px){body{margin: 5%}}</style>
+<body><main>
+    <div class="navigation">
+        [<a href="/" class="email">/home</a>][<a href="/todo.html" class="email">/todo</a>]
 [<a href="/link.html" class="email">/link</a>]
 [<a href="/pp.html" class="email">/pp</a>]
 [<a href="/pbo.html" class="email">/pbo</a>]
-[<a href="/sisfok.html" class="email">/sisfok-team</a>]
-[<a href="#" onclick="switchTheme()" class="email" id="changeTheme"></a>]</div><h1>Class dan Object</h1><p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com></code></p><div class="paragraph"><p>Konsep dasar dari Pemrograman Berorientasi objek sendiri adalah menyatakan
-sebuah objek real kedalam bahasa bahasa pemrograman.</p></div><div class="sect1"><h2 id="objek-object"><a class="anchor" href="#objek-object"></a>Objek (object)</h2><div class="sectionbody"><div class="paragraph"><p>Objek adalah hal, perkara, benda atau orang yang menjadi pokok pembicaraan
+<button onclick="switchTheme();" class="email" id="changeTheme"></button> 🠔 Click</div>
+    <h1>Class dan Object</h1>
+    
+    
+    
+    <p class="center"><code>Signed-off-by: Deo Valiandro. M &lt;valiandrod@gmail.com&gt;</code></p>
+    
+    <div class="paragraph">
+<p>Konsep dasar dari Pemrograman Berorientasi objek sendiri adalah menyatakan
+sebuah objek real kedalam bahasa bahasa pemrograman.</p>
+</div>
+<div class="sect1">
+<h2 id="objek-object"><a class="anchor" href="#objek-object"></a>Objek (object)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Objek adalah hal, perkara, benda atau orang yang menjadi pokok pembicaraan
 (KBBI, 2018). Misalnya seorang manusia, seekor kucing, seekor anjing atau benda
-lain, misalnya sebuah kursi. Itu adalah sebuah objek.</p></div><div class="paragraph"><p>Nah, setiap objek pasti memiliki identitas atau atribut, misalnya seorang
+lain, misalnya sebuah kursi. Itu adalah sebuah objek.</p>
+</div>
+<div class="paragraph">
+<p>Nah, setiap objek pasti memiliki identitas atau atribut, misalnya seorang
 manusia memiliki identitan atau atribut nama, umur, tinggi, berat dan berbagai
-identitas lainnya.</p></div><div class="paragraph"><p>Selain itu, sebuah objek juga pasti memiliki tingka laku, misalnya seorang
+identitas lainnya.</p>
+</div>
+<div class="paragraph">
+<p>Selain itu, sebuah objek juga pasti memiliki tingka laku, misalnya seorang
 manusia bisa makan, tidur, berjalan, bermain, koding dan berbagai kegiatan
-aktivitas lainnya.</p></div><div class="paragraph"><p>Sebuah objek dalam PBO juga demikian, objek tersebut akan memiliki
-sifat/atrribute dan perilaku/behaviour.</p></div><div class="paragraph"><p>Sifat/atribut yang dimaksud di PBO adalah sesuatu yang memiliki nilai, seperti
-ukuran, warna, berat, keterangan, dan semacamnya.</p></div><div class="paragraph"><p>Sedangkan tingkah laku/behaviour adalah kumpulan perintah yang melakukan suatu
-kegiatan spesifik.</p></div></div></div><div class="sect1"><h2 id="class"><a class="anchor" href="#class"></a>Class</h2><div class="sectionbody"><div class="paragraph"><p>Setiap objek memiliki blueprint atau cetakan, digunakan untuk membuat objek.
+aktivitas lainnya.</p>
+</div>
+<div class="paragraph">
+<p>Sebuah objek dalam PBO juga demikian, objek tersebut akan memiliki
+sifat/atrribute dan perilaku/behaviour.</p>
+</div>
+<div class="paragraph">
+<p>Sifat/atribut yang dimaksud di PBO adalah sesuatu yang memiliki nilai, seperti
+ukuran, warna, berat, keterangan, dan semacamnya.</p>
+</div>
+<div class="paragraph">
+<p>Sedangkan tingkah laku/behaviour adalah kumpulan perintah yang melakukan suatu
+kegiatan spesifik.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="class"><a class="anchor" href="#class"></a>Class</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Setiap objek memiliki blueprint atau cetakan, digunakan untuk membuat objek.
 Suatu cetakan akan ditentukan apa-apa saja yang akan dimasukkan kedalam sebuah
-objek. Sehingga dapat kita katakan bahwa:</p></div><div class="quoteblock"><blockquote><div class="paragraph"><p>Class adalah blueprint dari objek dan objek adalah instance dari sebuah class.</p></div></blockquote></div><div class="paragraph"><p>Di Java, semuanya dibungkus dengan sebuah <code>class</code>. <code>class</code> adalah core dari Java
-itu sendiri.</p></div><div class="paragraph"><p>Aturan untuk <code>class</code> Java:
+objek. Sehingga dapat kita katakan bahwa:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Class adalah blueprint dari objek dan objek adalah instance dari sebuah class.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Di Java, semuanya dibungkus dengan sebuah <code>class</code>. <code>class</code> adalah core dari Java
+itu sendiri.</p>
+</div>
+<div class="paragraph">
+<p>Aturan untuk <code>class</code> Java:
 1. <code>class</code> dapat memiliki <code>public</code> atau default (no modifier).
 2. Dapat berupa <code>abstract</code> atau <code>final</code> (<code>class</code> normal).
 3. Harus mempunyai keyword <code>class</code> dan harus diikuti nama <code>class</code> yang
-berupa PascalCase.
+   berupa PascalCase.
 4. Dapat meng-extend hanya sebuah <code>parent class</code>. Secara default, meng-extend
-class <code>Object</code>.
-5. Variabel dan method dibungkus didalam kurung kurawal (<code>{}</code>).</p></div><div class="paragraph"><p>Bentuk umum:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+   class <code>Object</code>.
+5. Variabel dan method dibungkus didalam kurung kurawal (<code>{}</code>).</p>
+</div>
+<div class="paragraph">
+<p>Bentuk umum:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -33,12 +104,23 @@ class <code>Object</code>.
      <span class="n">field</span><span class="o">;</span>
      <span class="n">method</span><span class="o">;</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Misalnya seorang anak yang baru lahir, pastilah dia akan memiliki nama, namun
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Misalnya seorang anak yang baru lahir, pastilah dia akan memiliki nama, namun
 kita belum memberikannya nama. Kenyataan bahwa dia akan memiliki nama, itu
 dimisalkan kedalam sebuah blueprint, bahwa seorang manusia pastilah memiliki
-nama, umur, perilaku, dan sebagainya.</p></div><div class="paragraph"><p>Misalnya blueprintnya:
+nama, umur, perilaku, dan sebagainya.</p>
+</div>
+<div class="paragraph">
+<p>Misalnya blueprintnya:
 1. Perilaku: bernafas, makan, bergerak, melihat, &#8230;&#8203; dst.
-2. Atribut: nama, umur, jenis kelamin, &#8230;&#8203; dsb.</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2. Atribut: nama, umur, jenis kelamin, &#8230;&#8203; dsb.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 4
@@ -54,22 +136,60 @@ nama, umur, perilaku, dan sebagainya.</p></div><div class="paragraph"><p>Misalny
     <span class="kt">void</span> <span class="nf">makan</span><span class="o">()</span> <span class="o">{}</span>
     <span class="kt">void</span> <span class="nf">berbicara</span><span class="o">()</span> <span class="o">{}</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>Untuk menggunakan cetakan ini untuk seorang manusia, maka dapat menggunakan
-perintah:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Untuk menggunakan cetakan ini untuk seorang manusia, maka dapat menggunakan
+perintah:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 </pre></td><td class="code"><pre><span class="nc">Manusia</span> <span class="n">deo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Manusia</span><span class="o">();</span>
-</pre></td></tr></tbody></table></code></pre></div></div><div class="paragraph"><p>maka akan muncul sebuah objek baru, dengan nama objek <code>deo</code>, dan memiliki nama,
-umur, jenis kelamin, bernafas, dll.</p></div><div class="paragraph"><p>Setiap kali objek di-instance dari sebuah class, maka objek tersebut mewarisi
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>maka akan muncul sebuah objek baru, dengan nama objek <code>deo</code>, dan memiliki nama,
+umur, jenis kelamin, bernafas, dll.</p>
+</div>
+<div class="paragraph">
+<p>Setiap kali objek di-instance dari sebuah class, maka objek tersebut mewarisi
 atribut dan perilaku dari class yang di-intace-kan. Artinya objek <code>deo</code> yang
 telah dibuat juga mempunyai atribut nama, umur dan semua atribut dan perilaku
-yang ada di <code>class Manusia</code>.</p></div><div class="paragraph"><p>Perintah <code>new</code> adalah sebuah keyword untuk mengalokasikan memory untuk object
-tersebut.</p></div><div class="paragraph"><p>Tapi, datanya belum diisi, dan masih sebatas sebuah template sehingga defaultnya
-nilainya <code>0</code>/<code>null</code>/<code>false</code>, kita dapat mengisinya dengan menggunakan perintah:</p></div><div class="listingblock"><div class="content"><pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+yang ada di <code>class Manusia</code>.</p>
+</div>
+<div class="paragraph">
+<p>Perintah <code>new</code> adalah sebuah keyword untuk mengalokasikan memory untuk object
+tersebut.</p>
+</div>
+<div class="paragraph">
+<p>Tapi, datanya belum diisi, dan masih sebatas sebuah template sehingga defaultnya
+nilainya <code>0</code>/<code>null</code>/<code>false</code>, kita dapat mengisinya dengan menggunakan perintah:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="code"><pre><span class="n">deo</span><span class="o">.</span><span class="na">nama</span> <span class="o">=</span> <span class="s">"Deo"</span><span class="o">;</span>
 <span class="n">deo</span><span class="o">.</span><span class="na">umur</span> <span class="o">=</span> <span class="mi">22</span><span class="o">;</span>
 <span class="n">deo</span><span class="o">.</span><span class="na">jenisKelamin</span> <span class="o">=</span> <span class="s">"Laki-laki"</span><span class="o">;</span>
-</pre></td></tr></tbody></table></code></pre></div></div></div></div><hr><footer><p>&copy; 2016 - 2022 Dibuat dengan ❤️ oleh Deo Valiandro. M, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p></footer><script src="/assets/js/js.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+</div>
+</div>
+    <hr><footer>
+    <a href="https://github.com/deovaliandro/deovaliandro.github.io/edit/main/_posts/oop/2019-04-28-class-and-object.adoc"><p><i class="fa-solid fa-pen-to-square"></i> Edit</p></a>
+    <p>&copy; 2016 - 2022 Dibuat dengan ❤️, dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA.</a></p>
+</footer>
+<script src="/assets/js/js.js"></script>
+<script src="https://kit.fontawesome.com/c42de40267.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!0,trust:!0})})</script></main></body></html>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$',display:true},{left:'$',right:'$',display:false}],throwOnError:true,trust:true});});</script></main>
+</body>
+
+</html>
